@@ -1,0 +1,34 @@
+state = {
+	id = 716
+	name = "STATE_716"
+	manpower = 5208000
+	resources = {
+		steel = 36
+	}
+
+	state_category = eight
+
+
+	history = {
+		owner = FNG
+		add_core_of = FNG
+		add_claim_by = QIE
+
+		buildings = {
+			infrastructure = 5
+			arms_factory = 3
+			industrial_complex = 4
+			dockyard = 1
+			air_base = 2
+			11764 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			11771 30
+		}
+	}
+	provinces = {
+		892 964 987 3783 6851 6918 9781 11764 11771
+	}
+}

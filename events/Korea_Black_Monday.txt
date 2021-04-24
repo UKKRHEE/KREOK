@@ -1,0 +1,84 @@
+﻿###########################
+# 한국 검은 월요일
+###########################
+
+add_namespace = korbm
+
+country_event = { #검은 월요일이 한국을 휩쓸다
+	id = korbm.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korbm.1"}
+	title = korbm.1.t
+	desc = korbm.1.d
+	picture = GFX_report_event_KOR_protests
+	is_triggered_only = yes
+	
+	option = {
+		name = korbm.1.a
+		add_ideas = KOR_black_monday
+		add_stability = -0.10
+		hidden_effect = {
+			country_event = {
+				id = korbm.2
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #사회 혼란
+	id = korbm.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korbm.2"}
+	title = korbm.2.t
+	desc = korbm.2.d
+	picture = GFX_report_event_KOR_protests 
+	is_triggered_only = yes
+	
+	option = {
+		name = korbm.2.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = korbm.3
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { #금 모으기 운동
+	id = korbm.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korbm.3"}
+	title = korbm.3.t
+	desc = korbm.3.d
+	picture = GFX_report_event_KOR_gold
+	is_triggered_only = yes
+	
+	option = {
+		name = korbm.3.a
+		add_stability = 0.15
+		add_timed_idea = {
+			idea = KOR_gold
+			days = 30
+		}
+		hidden_effect = {
+			country_event = {
+				id = korbm.4
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { #테러
+	id = korbm.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korbm.4"}
+	title = korbm.4.t
+	desc = korbm.4.d
+	picture = GFX_report_event_JAP_coup 
+	is_triggered_only = yes
+	
+	option = {
+		name = korbm.4.a
+		add_stability = -0.15
+	}
+}

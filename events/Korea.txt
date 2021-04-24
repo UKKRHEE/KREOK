@@ -1,0 +1,1501 @@
+﻿###########################
+# 한국 이벤트
+###########################
+
+add_namespace = korea
+add_namespace = koras
+add_namespace = korele
+add_namespace = korslml
+
+country_event = { #시작 이벤트
+	id = korea.991
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.991"}
+	title = korea.991.t
+	desc = korea.991.d
+	picture = GFX_report_event_KOR_korea
+
+	is_triggered_only = yes
+
+	option = {
+		name = korea.0.a
+		set_country_flag = KOR_civil
+	}
+}
+
+country_event = { #시작 이벤트
+	id = korea.992
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.992"}
+	title = korea.992.t
+	desc = korea.992.d
+	picture = GFX_report_event_KOR_korea
+
+	is_triggered_only = yes
+
+	option = {
+		name = korea.0.a
+		set_country_flag = KOR_ihwa
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		
+	}
+}
+
+country_event = { #시작 이벤트
+	id = korea.993
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.993"}
+	title = korea.993.t
+	desc = korea.993.d
+	picture = GFX_report_event_KOR_korea
+
+	is_triggered_only = yes
+	
+	option = {
+		name = korea.0.a
+		set_country_flag = KOR_daemagliji
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = { #시작 이벤트
+	id = korea.0
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.0"}
+	title = korea.0.t
+	desc = korea.0.d
+	picture = GFX_report_event_KOR_korea
+
+	trigger = {
+		tag = KOR
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	option = {
+		name = korea.0.a
+	}
+}
+
+country_event = { #융희제 이척 폐하 승하
+	id = korea.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.1"}
+	title = korea.1.t
+	desc = korea.1.d
+	picture = GFX_report_event_KOR_emperor
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1936.1.30
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = korea.1.a #강주제 이강 폐하 즉위
+
+		kill_country_leader = yes
+		
+		country_event = {
+			id = korea.2
+			days = 30
+		}
+
+		hidden_effect = {
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = "POLITICS_Yi_Kang_DESC"
+				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = social_democrat_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = "POLITICS_Yi_Kang_DESC"
+				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = "POLITICS_Yi_Kang_DESC"
+				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = market_liberal_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = "POLITICS_Yi_Kang_DESC"
+				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = "POLITICS_Yi_Kang_DESC"
+				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = "POLITICS_Yi_Kang_DESC"
+				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = "POLITICS_Yi_Kang_DESC"
+				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = {}
+			}
+		}
+	}
+}
+
+country_event = { #강주황제의 즉위식
+	id = korea.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.2"}
+	title = korea.2.t
+	desc = korea.2.d
+	picture = GFX_report_event_KOR_korea
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = korea.2.a 
+        add_political_power = 35
+        add_stability = 0.10
+		if = {
+			limit = {
+				has_global_flag = NEWS_ALL
+			}
+			random_country = {
+				hidden_effect = { news_event = { id = worldnews.1300 days = 3 } }
+			}
+		}
+	}
+}
+
+country_event = { #성장형 복지
+	id = korea.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.3"}
+	title = korea.3.t
+	desc = korea.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = korea.3.a #아주 좋은 생각이군! 
+        add_political_power = -75
+        add_stability = 0.15
+	}
+
+	option = {
+		name = korea.3.b #이런 불확실한 정책에 투자할 수는 없다 
+        add_political_power = 75
+        add_stability = -0.15
+	}
+}
+
+country_event = { #사회권 도입
+	id = korea.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.4"}
+	title = korea.4.t
+	desc = korea.4.d
+	is_triggered_only = yes
+
+	option = {
+	    name = korea.4.a 
+		add_popularity = {
+			ideology = social_democrat popularity = 0.05
+		}
+        add_political_power = -100
+        add_stability = 0.20
+	}
+
+	option = {
+	    name = korea.4.b 
+		add_popularity = {
+			ideology = social_democrat popularity = -0.05
+		}
+        add_political_power = 100
+        add_stability = -0.20
+	}
+}
+
+country_event = { #전평의 운명
+	id = korea.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.5"}
+	title = korea.5.t
+	desc = korea.5.d
+	is_triggered_only = yes
+
+	option = {
+	    name = korea.5.a
+		add_political_power = -50		
+	    add_ideas = KOR_NCJTU
+	}
+
+	option = {
+	    name = korea.5.b
+		add_political_power = 50
+		add_timed_idea = {
+			idea = KOR_NOT_NCJTU
+			days = 180
+		}
+	}
+}
+
+country_event = { #만주 완전 점령
+	id = korea.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.6"}
+	title = korea.6.t
+	desc = korea.6.d
+
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = KOR
+		is_subject = no
+		745 = { is_owned_by = KOR }
+		716 = { is_owned_by = KOR }
+		328 = { is_owned_by = KOR }
+		886 = { is_owned_by = KOR }
+		885 = { is_owned_by = KOR }
+		610 = { is_owned_by = KOR }
+		715 = { is_owned_by = KOR }
+		714 = { is_owned_by = KOR }
+		884 = { is_owned_by = KOR }
+		883 = { is_owned_by = KOR }
+		717 = { is_owned_by = KOR }
+	}
+
+	option = { #안정화를 진행해라
+		name = korea.6.a
+		add_political_power = -50
+        add_stability = -0.05
+        add_war_support = -0.05
+		hidden_effect = {
+			country_event = { id = korea.7 days = 300 }
+        }
+	}
+}
+
+country_event = { #만주 코어
+	id = korea.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.7"}
+	title = korea.7.t
+	desc = korea.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korea.7.a
+		add_political_power = 50
+        add_stability = 0.05
+        add_war_support = 0.05
+		add_state_core = 610
+		add_state_core = 715
+		add_state_core = 714
+		add_state_core = 884
+		add_state_core = 883
+		add_state_core = 717
+	}
+}
+
+country_event = { #아리랑
+	id = korea.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.8"}
+	title = korea.8.t
+	desc = korea.8.d
+	picture = GFX_report_event_KOR_na_woon_gyu
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1940.1.1
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = korea.8.a
+
+	}
+}
+
+country_event = { #애국부인회 사건
+	id = korea.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.9"}
+	title = korea.9.t
+	desc = korea.9.d
+	picture = GFX_report_event_KOR_patriotic_woman
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1937.1.2
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.9.a
+	}
+}
+
+country_event = { #재미한인들 귀국
+	id = korea.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.10"}
+	title = korea.10.t
+	desc = korea.10.d
+	picture = GFX_report_event_KOR_korean_american
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		is_subject = no
+		country_exists = CSA
+	}
+
+	option = {
+		name = korea.10.a
+	}
+}
+
+country_event = { #정치 깡패
+	id = korea.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.11"}
+	title = korea.11.t
+	desc = korea.11.d
+	picture = GFX_report_event_KOR_political_gangster
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1937.2.25
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.11.a
+		add_stability = -0.10
+		add_political_power = -100
+	}
+}
+
+country_event = { #조선어학회
+	id = korea.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.12"}
+	title = korea.12.t
+	desc = korea.12.d
+	picture = GFX_report_event_KOR_korean_language_society
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1939.7.5
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.12.a
+		add_timed_idea = {
+			idea = KOR_korean_language_society
+			days = 180
+		}
+	}
+}
+
+country_event = { #중앙극장
+	id = korea.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.13"}
+	title = korea.13.t
+	desc = korea.13.d
+	picture = GFX_report_event_KOR_central_theater
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1936.3.14
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.13.a
+	}
+}
+
+country_event = { #빌헬름 황태자 방한
+	id = korea.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.14"}
+	title = korea.14.t
+	desc = korea.14.d
+	picture = GFX_report_event_KOR_kronprinz_wilhelm
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1938.4.13
+		OR = {
+			country_exists = GER
+			country_exists = GEX
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.14.a
+		add_stability = 0.05
+	}
+}
+
+country_event = { #이범석 암살 미수
+	id = korea.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.15"}
+	title = korea.15.t
+	desc = korea.15.d
+	picture = GFX_report_event_JAP_coup
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1940.3.23
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.15.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = totalist popularity = -0.01
+		}
+		add_popularity = {
+			ideology = syndicalist popularity = -0.01
+		}
+		add_popularity = {
+			ideology = radical_socialist popularity = -0.01
+		}
+	}
+	
+	option = {
+		name = korea.15.b
+		add_stability = 0.05
+		add_political_power = -50
+	}
+}
+
+country_event = { #황태자 책봉식
+	id = korea.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.16"}
+	title = korea.16.t
+	desc = korea.16.d
+	picture = GFX_report_event_KOR_crown_prince
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1937.5.1
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.16.a
+		add_stability = 0.05
+		add_political_power = 25
+	}
+}
+
+country_event = { #제국익문사 vs 전평
+	id = korea.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.17"}
+	title = korea.17.t
+	desc = korea.17.d
+	picture = GFX_report_event_KOR_intelligence_agency
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1936.7.3
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.17.a
+	}
+}
+
+country_event = { #호랑이 사냥
+	id = korea.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.18"}
+	title = korea.18.t
+	desc = korea.18.d
+	picture = GFX_report_event_KOR_tiger_hunting
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1938.9.15
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = korea.18.a
+	}
+}
+
+country_event = { #열도 완전 점령
+	id = korea.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.19"}
+	title = korea.19.t
+	desc = korea.19.d
+	
+	is_triggered_only = yes
+
+	option = { #안정화를 진행해라
+		name = korea.19.a
+		add_political_power = -50
+        add_stability = -0.05
+        add_war_support = -0.05
+		hidden_effect = {
+			country_event = { id = korea.20 days = 300 }
+        }
+	}
+}
+
+country_event = { #열도 코어
+	id = korea.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.20"}
+	title = korea.20.t
+	desc = korea.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korea.20.a
+		add_political_power = 50
+        add_stability = 0.05
+        add_war_support = 0.05
+		every_state = {
+			limit = { is_core_of = JAP }
+			add_core_of = KOR
+		}
+	}
+}
+
+country_event = { #연해주 완전 점령
+	id = korea.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.21"}
+	title = korea.21.t
+	desc = korea.21.d
+
+	is_triggered_only = yes
+
+	option = { #안정화를 진행해라
+		name = korea.21.a
+		add_political_power = -50
+        add_stability = -0.05
+        add_war_support = -0.05
+		hidden_effect = {
+			country_event = { id = korea.22 days = 300 }
+        }
+	}
+}
+
+country_event = { #연해주 코어
+	id = korea.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korea.22"}
+	title = korea.22.t
+	desc = korea.22.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korea.22.a
+		add_political_power = 50
+        add_stability = 0.05
+        add_war_support = 0.05
+		add_state_core = 408
+		add_state_core = 409
+	}
+}
+
+country_event = { #1936년 선거
+	id = korele.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korele.1"}
+	title = korele.1.t
+	desc = korele.1.d
+	picture = GFX_report_event_KOR_election
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1936.3.01
+		date < 1936.4.01
+		KOR = { is_subject = no }
+		OR = { 
+			has_government = social_democrat 
+			has_government = social_liberal 
+			has_government = market_liberal
+			has_government = social_conservative 
+			has_government = authoritarian_democrat
+		} 
+	}
+
+	option = { #신한청년당
+		name = korele.1.a
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 1
+		    	syndicalist = 4
+		    	radical_socialist = 2
+		    	social_democrat = 23
+		    	social_liberal = 9
+		    	market_liberal = 5
+		    	social_conservative = 38
+		    	authoritarian_democrat = 13
+		   		paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}		
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Kim_Ku_hog_sco
+			KOR_Kim_Gyu_Sik_for_sli
+			KOR_Yi_Si_yeong_eco_sco
+			KOR_Ham_Tae_young_sec_sco
+		}
+	}
+
+	option = { #독립협회
+		name = korele.1.b
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		country_event = {
+			id = korslml.1
+		}
+	}
+
+	option = { #황국협회
+		name = korele.1.c
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+		
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 1
+		    	syndicalist = 4
+		    	radical_socialist = 2
+		    	social_democrat = 20
+		    	social_liberal = 7
+		    	market_liberal = 2
+		    	social_conservative = 23
+		    	authoritarian_democrat = 36
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yi_Sang_sul_hog_ade
+			KOR_Yi_Wi_jong_for_ade
+			KOR_Kim_Chang_sook_eco_ade
+			KOR_Yi_Gab_sec_ade
+		}
+	}
+
+	option = { #한인사회당
+		name = korele.1.e
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+			    totalist = 1
+			    syndicalist = 4
+			    radical_socialist = 2
+			    social_democrat = 38
+			    social_liberal = 12
+			    market_liberal = 5
+			    social_conservative = 20
+			    authoritarian_democrat = 13
+			    paternal_autocrat = 3
+			    national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yuh_Woon_Hyung_hog_sde
+			KOR_Alexandra_Kim_for_sde
+			KOR_Yang_Gi_tak_eco_sli
+			KOR_An_Chang_ho_sec_sde
+		}
+	}
+}
+
+country_event = { #총리대신 임명
+	id = korslml.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korslml.1"}
+	title = korslml.1.t
+	desc = korslml.1.d
+	picture = GFX_report_event_KOR_election
+
+	is_triggered_only = yes
+
+	option = { #김규식
+		name = korslml.1.a
+
+		ai_chance = { factor = 34 }
+
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+			    totalist = 1
+			    syndicalist = 1
+			    radical_socialist = 2
+			    social_democrat = 18
+			    social_liberal = 35
+		 	    market_liberal = 6
+			    social_conservative = 21
+			    authoritarian_democrat = 11
+			    paternal_autocrat = 3
+		 	    national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Kim_Kyu_sik_hog_sli
+			KOR_Chang_Myon_for_mli
+			KOR_Kim_Do_yeon_eco_mli
+			KOR_Hong_Jin_sec_sli
+		}
+	}
+
+	option = { #김성수
+		name = korslml.1.b
+
+		ai_chance = { factor = 32 }
+
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+			    totalist = 1
+			    syndicalist = 2
+			    radical_socialist = 2
+			    social_democrat = 18
+			    social_liberal = 6
+			    market_liberal = 34
+			    social_conservative = 21
+			    authoritarian_democrat = 11
+			    paternal_autocrat = 3
+			    national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Kim_Sung_soo_hog_mli
+			KOR_Chang_Myon_for_mli
+			KOR_Kim_Do_yeon_eco_mli
+			KOR_Hong_Jin_sec_sli
+		}
+	}
+	
+	option = { #서재필
+		name = korslml.1.c
+
+		ai_chance = { factor = 34 }
+
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+			    totalist = 1
+			    syndicalist = 1
+			    radical_socialist = 2
+			    social_democrat = 18
+			    social_liberal = 35
+		 	    market_liberal = 6
+			    social_conservative = 21
+			    authoritarian_democrat = 11
+			    paternal_autocrat = 3
+		 	    national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Soh_Jai_pil_hog_sli
+			KOR_Kim_Gyu_Sik_for_sli
+			KOR_Kim_Do_yeon_eco_mli
+			KOR_Hong_Jin_sec_sli
+		}
+	}
+}
+
+country_event = { #1941년 선거
+	id = korele.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korele.2"}
+	title = korele.1.t
+	desc = korele.1.d
+	picture = GFX_report_event_KOR_election
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1941.3.01
+		date < 1941.4.01
+		KOR = { is_subject = no }
+		OR = { 
+			has_government = social_democrat 
+			has_government = social_liberal 
+			has_government = market_liberal
+			has_government = social_conservative 
+			has_government = authoritarian_democrat
+		} 
+	}
+
+	option = { #신한청년당
+		name = korele.1.a
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+			    totalist = 0
+			    syndicalist = 2
+			    radical_socialist = 1
+			    social_democrat = 25
+			    social_liberal = 10
+			    market_liberal = 6
+			    social_conservative = 38
+			    authoritarian_democrat = 13
+			    paternal_autocrat = 3
+			    national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Kim_Ku_hog_sco
+			KOR_Kim_Gyu_Sik_for_sli
+			KOR_Yi_Si_yeong_eco_sco
+			KOR_Ham_Tae_young_sec_sco
+		}
+	}
+
+	option = { #독립협회
+		name = korele.1.b
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		country_event = {
+			id = korslml.1
+		}
+	}
+
+	option = { #황국협회
+		name = korele.1.c
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 0
+		    	syndicalist = 2
+		    	radical_socialist = 1
+		    	social_democrat = 21
+		    	social_liberal = 8
+		    	market_liberal = 4
+		    	social_conservative = 23
+		    	authoritarian_democrat = 36
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yi_Sang_sul_hog_ade
+			KOR_Yi_Wi_jong_for_ade
+			KOR_Kim_Chang_sook_eco_ade
+			KOR_Yi_Gab_sec_ade
+		}	
+	}
+
+	option = { #한인사회당
+		name = korele.1.e
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 0
+		    	syndicalist = 2
+		    	radical_socialist = 1
+		    	social_democrat = 38
+		    	social_liberal = 13
+		    	market_liberal = 7
+		    	social_conservative = 21
+		    	authoritarian_democrat = 13
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yuh_Woon_Hyung_hog_sde
+			KOR_Alexandra_Kim_for_sde
+			KOR_Yang_Gi_tak_eco_sli
+			KOR_An_Chang_ho_sec_sde
+		}
+	}
+}
+
+country_event = { #1946년 선거
+	id = korele.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korele.3"}
+	title = korele.1.t
+	desc = korele.1.d
+	picture = GFX_report_event_KOR_election
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1946.3.01
+		date < 1946.4.01
+		KOR = { is_subject = no }
+		OR = { 
+			has_government = social_democrat 
+			has_government = social_liberal 
+			has_government = market_liberal
+			has_government = social_conservative 
+			has_government = authoritarian_democrat
+		} 
+	}
+
+	option = { #신한청년당
+		name = korele.1.a
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+			    totalist = 0
+			    syndicalist = 0
+			    radical_socialist = 1
+			    social_democrat = 25
+		    	social_liberal = 11
+		    	market_liberal = 7
+		    	social_conservative = 38
+		    	authoritarian_democrat = 13
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Kim_Ku_hog_sco
+			KOR_Kim_Gyu_Sik_for_sli
+			KOR_Yi_Si_yeong_eco_sco
+			KOR_Ham_Tae_young_sec_sco
+		}
+	}
+
+	option = { #독립협회
+		name = korele.1.b
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		country_event = {
+			id = korslml.1
+		}
+	}
+
+	option = { #황국협회
+		name = korele.1.c
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 0
+		    	syndicalist = 0
+		    	radical_socialist = 1
+		    	social_democrat = 22
+		    	social_liberal = 8
+		    	market_liberal = 4
+		    	social_conservative = 23
+		    	authoritarian_democrat = 37
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yi_Sang_sul_hog_ade
+			KOR_Yi_Wi_jong_for_ade
+			KOR_Kim_Chang_sook_eco_ade
+			KOR_Yi_Gab_sec_ade
+		}
+	}
+
+	option = { #한인사회당
+		name = korele.1.e
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 0
+		    	syndicalist = 0
+		    	radical_socialist = 1
+		    	social_democrat = 38
+		    	social_liberal = 13
+		    	market_liberal = 8
+		    	social_conservative = 22
+		    	authoritarian_democrat = 13
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yuh_Woon_Hyung_hog_sde
+			KOR_Alexandra_Kim_for_sde
+			KOR_Yang_Gi_tak_eco_sli
+			KOR_An_Chang_ho_sec_sde
+		}
+	}
+}
+
+country_event = { #1951년 선거
+	id = korele.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korele.4"}
+	title = korele.1.t
+	desc = korele.1.d
+	picture = GFX_report_event_KOR_election
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1951.3.01
+		date < 1951.4.01
+		KOR = { is_subject = no }
+		OR = { 
+			has_government = social_democrat 
+			has_government = social_liberal 
+			has_government = market_liberal
+			has_government = social_conservative 
+			has_government = authoritarian_democrat
+		} 
+	}
+
+	option = { #신한청년당
+		name = korele.1.a
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 0
+		    	syndicalist = 0
+		    	radical_socialist = 0
+		    	social_democrat = 25
+		    	social_liberal = 12
+		    	market_liberal = 8
+		    	social_conservative = 38
+		    	authoritarian_democrat = 13
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Kim_Ku_hog_sco
+			KOR_Kim_Gyu_Sik_for_sli
+			KOR_Yi_Si_yeong_eco_sco
+			KOR_Ham_Tae_young_sec_sco
+		}
+	}
+
+	option = { #독립협회
+		name = korele.1.b
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		country_event = {
+			id = korslml.1
+		}
+	}
+
+	option = { #황국협회
+		name = korele.1.c
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 0
+		    	syndicalist = 0
+		    	radical_socialist = 0
+		    	social_democrat = 20
+		    	social_liberal = 9
+		    	market_liberal = 5
+		    	social_conservative = 25
+		    	authoritarian_democrat = 36
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yi_Sang_sul_hog_ade
+			KOR_Yi_Wi_jong_for_ade
+			KOR_Kim_Chang_sook_eco_ade
+			KOR_Yi_Gab_sec_ade
+		}
+	}
+
+	option = { #한인사회당
+		name = korele.1.e
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 0
+		    	syndicalist = 0
+		    	radical_socialist = 0
+		    	social_democrat = 38
+		    	social_liberal = 13
+		    	market_liberal = 8
+		    	social_conservative = 23
+		    	authoritarian_democrat = 13
+		    	paternal_autocrat = 3
+		    	national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yuh_Woon_Hyung_hog_sde
+			KOR_Alexandra_Kim_for_sde
+			KOR_Yang_Gi_tak_eco_sli
+			KOR_An_Chang_ho_sec_sde
+		}
+	}
+}
+
+country_event = { #1956년 선거
+	id = korele.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korele.5"}
+	title = korele.1.t
+	desc = korele.1.d
+	picture = GFX_report_event_KOR_election
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1956.3.01
+		date < 1956.4.01
+		KOR = { is_subject = no }
+		OR = { 
+			has_government = social_democrat 
+			has_government = social_liberal 
+			has_government = market_liberal
+			has_government = social_conservative 
+			has_government = authoritarian_democrat
+		} 
+	}
+
+	option = { #신한청년당
+		name = korele.1.a
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+		    	totalist = 0
+		    	syndicalist = 0
+		    	radical_socialist = 0
+		    	social_democrat = 26
+		    	social_liberal = 13
+		    	market_liberal = 9
+		    	social_conservative = 38
+		    	authoritarian_democrat = 11
+		    	paternal_autocrat = 2
+		    	national_populist = 1
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Kim_Ku_hog_sco
+			KOR_Kim_Gyu_Sik_for_sli
+			KOR_Yi_Si_yeong_eco_sco
+			KOR_Ham_Tae_young_sec_sco
+		}
+	}
+
+	option = { #독립협회
+		name = korele.1.b
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		country_event = {
+			id = korslml.1
+		}
+	}
+
+	option = { #황국협회
+		name = korele.1.c
+
+		ai_chance = { factor = 20 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+			    totalist = 0
+			    syndicalist = 0
+			    radical_socialist = 0
+		 	    social_democrat = 21
+			    social_liberal = 10
+			    market_liberal = 5
+			    social_conservative = 26
+			    authoritarian_democrat = 35
+			    paternal_autocrat = 2
+			    national_populist = 1
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yi_Sang_sul_hog_ade
+			KOR_Yi_Wi_jong_for_ade
+			KOR_Kim_Chang_sook_eco_ade
+			KOR_Yi_Gab_sec_ade
+		}
+	}
+
+	option = { #한인사회당
+		name = korele.1.e
+
+		ai_chance = { factor = 30 }
+
+		add_political_power = 10
+
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+			    totalist = 0
+			    syndicalist = 0
+			    radical_socialist = 0
+			    social_democrat = 38
+			    social_liberal = 15
+			    market_liberal = 10
+			    social_conservative = 23
+			    authoritarian_democrat = 11
+			    paternal_autocrat = 2
+			    national_populist = 1
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			KOR_Yuh_Woon_Hyung_hog_sde
+			KOR_Alexandra_Kim_for_sde
+			KOR_Yang_Gi_tak_eco_sli
+			KOR_An_Chang_ho_sec_sde
+		}
+	}
+}
+
+country_event = { #이건 암살
+	id = koras.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event koras.1"}
+	title = koras.1.t
+	desc = koras.1.d
+	picture = GFX_report_event_JAP_coup
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 1936.1.5
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = koras.1.a
+        add_political_power = -75
+        add_stability = -0.10
+	}
+}

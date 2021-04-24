@@ -1,0 +1,78 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_report_event_KOR_korea"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_korea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_gold"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_gold.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_protests"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_protests.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_na_woon_gyu"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_na_woon_gyu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_patriotic_woman"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_patriotic_woman.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_political_gangster"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_political_gangster.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_korean_language_society"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_korean_language_society.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_central_theater"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_central_theater.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_kronprinz_wilhelm"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_kronprinz_wilhelm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_crown_prince"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_crown_prince.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_emperor"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_emperor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_korean_american"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_korean_american.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_intelligence_agency"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_intelligence_agency.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_election"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_election.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_KOR_tiger_hunting"
+		texturefile = "gfx/event_pictures/East_Asia/Korea/KOR_tiger_hunting.dds"
+	}
+	
+}

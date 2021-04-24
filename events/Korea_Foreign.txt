@@ -1,0 +1,2140 @@
+﻿###########################
+# 한국 외교 이벤트
+###########################
+
+add_namespace = korfor
+add_namespace = korfri
+add_namespace = fprf
+add_namespace = korex
+add_namespace = korfjap
+add_namespace = korfchi
+
+country_event = { #한국은 라이히스팍트에 가입하기를 원한다
+	id = korfor.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.1"}
+	title = korfor.1.t
+	desc = korfor.1.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = korfor.1.a #독일의 카이저는 한국의 카이저를 환영한다
+		ai_chance = { factor = 95 }
+		add_political_power = 140
+		effect_tooltip = { add_to_faction = KOR }
+		KOR = { country_event = { id = korfor.3 hours = 5 } }
+	}
+	option = {
+		name = korfor.1.b #별로 좋은 생각이 아니다
+		ai_chance = { factor = 5 }
+		add_political_power = -20
+		KOR = { country_event = { id = korfor.4 hours = 5 } }
+	}
+}
+
+country_event = { #한국은 협상국에 가입하기를 원한다
+	id = korfor.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.2"}
+	title = korfor.2.t
+	desc = korfor.2.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = korfor.2.a #신이여 새 협상국을 보호하소서
+		ai_chance = { factor = 95 }
+		add_political_power = 140
+		effect_tooltip = { add_to_faction = KOR }
+		KOR = { country_event = { id = korfor.5 hours = 5 } }
+	}
+	option = {
+		name = korfor.2.b #별로 좋은 생각이 아니다
+		ai_chance = { factor = 5 }
+		add_political_power = -20
+		KOR = { country_event = { id = korfor.6 hours = 5 } }
+	}
+}
+
+country_event = { #독일과의 동맹 체결
+	id = korfor.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.3"}
+	title = korfor.3.t
+	desc = korfor.3.d
+	picture = GFX_report_event_generic_diplomacy3
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.3.a
+		add_political_power = 60
+		FROM = { add_to_faction = ROOT }
+	}
+}
+
+country_event = { #독일의 동맹 거부
+	id = korfor.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.4"}
+	title = korfor.4.t
+	desc = korfor.4.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.4.a
+		add_political_power = -20
+	}
+}
+
+country_event = { #캐나다와의 동맹 체결
+	id = korfor.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.5"}
+	title = korfor.5.t
+	desc = korfor.5.d
+	picture = GFX_report_event_generic_diplomacy3
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.5.a
+		add_political_power = 60
+		FROM = { add_to_faction = ROOT }
+	}
+}
+
+country_event = { #캐나다의 동맹 거부
+	id = korfor.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.6"}
+	title = korfor.6.t
+	desc = korfor.6.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.6.a
+		add_political_power = -20
+	}
+}
+
+country_event = { #시암-한국 동맹 제안
+	id = korfor.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.7"}
+	title = korfor.7.t
+	desc = korfor.7.d
+	is_triggered_only = yes
+	option = { #승인
+		name = korfor.7.a
+		ai_chance = {
+			factor = 85
+		}
+		KOR = {
+			country_event = {
+				id = korfor.8 days = 3
+			}
+		}
+	}
+
+	option = { #거절
+		name = korfor.7.b
+		ai_chance = {
+			factor = 15
+		}
+		KOR = {
+			country_event = {
+				id = korfor.9 days = 3
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = KOR modifier = KOR_siam_refuse
+		}
+		add_political_power = 10
+	}
+}
+
+country_event = { #한국-시암 동맹 체결
+	id = korfor.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.8"}
+	title = korfor.8.t
+	desc = korfor.8.d
+	is_triggered_only = yes
+	option = {
+		name = korfor.8.a
+		add_to_faction = SIA
+		reverse_add_opinion_modifier = {
+			target = SIA modifier = KOR_siam_okay
+		}
+		add_political_power = 100
+	}
+}
+
+country_event = { #한국-시암 동맹 거부
+	id = korfor.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.9"}
+	title = korfor.9.t
+	desc = korfor.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.9.a
+		add_political_power = -20
+	}
+}
+
+country_event = { #토후 연맹-한국 동맹 제안
+	id = korfor.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.10"}
+	title = korfor.10.t
+	desc = korfor.10.d
+	is_triggered_only = yes
+	option = { #승인
+		name = korfor.10.a
+		ai_chance = {
+			factor = 85
+		}
+		KOR = {
+			country_event = {
+				id = korfor.11 days = 3
+			}
+		}
+	}
+
+	option = { #거절
+		name = korfor.10.b
+		ai_chance = {
+			factor = 15
+		}
+		KOR = {
+			country_event = {
+				id = korfor.12 days = 3
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = KOR modifier = KOR_India_refuse
+		}
+		add_political_power = 10
+	}
+}
+
+country_event = { #한국-토후 연맹 동맹 체결
+	id = korfor.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.11"}
+	title = korfor.11.t
+	desc = korfor.11.d
+	is_triggered_only = yes
+	option = {
+		name = korfor.11.a
+		add_to_faction = PRF
+		reverse_add_opinion_modifier = {
+			target = PRF modifier = KOR_India_okay
+		}
+		add_political_power = 100
+	}
+}
+
+country_event = { #한국-토후 연맹 동맹 거부
+	id = korfor.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.12"}
+	title = korfor.12.t
+	desc = korfor.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.12.a
+		add_political_power = -20
+	}
+}
+
+country_event = { #봉천 최후 통첩
+	id = korfor.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.13"}
+	title = korfor.13.t
+	desc = korfor.13.d	
+	is_triggered_only = yes
+	option = { 
+		name = korfor.13.a
+		ai_chance = { factor = 65 }
+		declare_war_on = {
+			target = KOR
+			type = annex_everything
+		}
+		effect_tooltip = {
+			KOR = {
+				country_event = { id = korfor.14 }
+			}
+		}
+		hidden_effect = {
+			KOR = { country_event = { id = korfor.14 } }
+		}
+	}
+	option = { 
+		name = korfor.13.b
+		ai_chance = { factor = 35 }
+		effect_tooltip = {
+			KOR = {
+				country_event = { id = korfor.15 }
+			}
+		}
+		hidden_effect = {
+			KOR = { country_event = { id = korfor.15 } }
+		}
+	}
+}
+
+country_event = { #봉천 저항
+	id = korfor.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.14"}
+	title = korfor.14.t
+	desc = korfor.14.d
+	is_triggered_only = yes
+	option = {
+		name = korfor.14.a
+	}
+}
+
+country_event = { #봉천 항복
+	id = korfor.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.15"}
+	title = korfor.15.t
+	desc = korfor.15.d	
+	is_triggered_only = yes
+	option = {
+		name = korfor.15.a
+		FNG = {
+			every_unit_leader = {
+				set_nationality = KOR
+			}
+		}
+        KOR = { annex_country = { target = FNG transfer_troops = yes } }
+	}
+
+}
+
+country_event = { #청나라 정변 사주
+	id = korfor.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.16"}
+	title = korfor.16.t
+	desc = korfor.16.d	
+	is_triggered_only = yes
+	option = { 
+		name = korfor.16.a
+		ai_chance = { factor = 50 }
+		effect_tooltip = {
+			KOR = {
+				country_event = { id = korfor.17 }
+			}
+		}
+		hidden_effect = {
+			KOR = { country_event = { id = korfor.17 } }
+		}
+	}
+	option = { 
+		name = korfor.16.b
+		ai_chance = { factor = 50 }
+		effect_tooltip = {
+			KOR = {
+				country_event = { id = korfor.18 }
+			}
+		}
+		hidden_effect = {
+			KOR = { country_event = { id = korfor.18 } }
+		}
+	}
+}
+
+country_event = { #청나라 전쟁
+	id = korfor.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.17"}
+	title = korfor.17.t
+	desc = korfor.17.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.17.a
+		create_wargoal = {
+			type = annex_everything
+			target = QIE
+		}
+	}
+}
+
+country_event = { #청나라 괴뢰
+	id = korfor.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.18"}
+	title = korfor.18.t
+	desc = korfor.18.d
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.18.a
+		puppet = QIE
+		QIE = {
+			country_event = { id = korex.14 }
+		}
+	}
+}
+
+country_event = { #과학 집현전으로의 초청
+	id = korfor.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.19"}
+	title = korfor.19.t
+	desc = korfor.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name =  korfor.19.a
+		SIA = {
+			add_to_tech_sharing_group = kor_faction_research
+		}
+		KOR = {
+			country_event = { id = korfor.20 }
+		}
+	}
+
+}
+
+country_event = {
+	id = korfor.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.20"}
+	title = korfor.20.t
+	desc = korfor.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.20.a
+        add_political_power = 15
+	}
+
+}
+
+country_event = { #과학 집현전으로의 초청
+	id = korfor.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.21"}
+	title = korfor.21.t
+	desc = korfor.21.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.21.a
+		PRF = {
+			add_to_tech_sharing_group = kor_faction_research
+		}
+		KOR = {
+			country_event = { id = korfor.22 }
+		}
+	}
+
+}
+
+country_event = {
+	id = korfor.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfor.22"}
+	title = korfor.22.t
+	desc = korfor.22.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.22.a
+        add_political_power = 15
+	}
+
+}
+
+country_event = { #일본이 한국을 공격하다!
+	id = korfri.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.1"}
+	title = korfri.1.t
+	desc = korfri.1.d
+	is_triggered_only = yes
+	option = { #한국을 지원하고 일본에 경고 해라!
+		name = korfri.1.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 50
+		KOR = {
+			country_event = {
+				id = korfri.2 days = 2
+			}
+		}
+		JAP = {
+			country_event = {
+				id = korfri.4 days = 2
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1 amount = -3000
+		}
+		add_manpower = -3000
+	}
+	option = { #물러나 있자
+		name = korfri.1.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -100
+		KOR = {
+			country_event = {
+				id = korfri.3 days = 2
+			}
+		}
+	}
+}
+
+country_event = { #독일이 우리를 지원한다!
+	id = korfri.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.2"}
+	title = korfri.2.t
+	desc = korfri.2.d
+	is_triggered_only = yes
+	option = { #우리는 승리할 것이다!
+		name = korfri.2.a
+		add_manpower = 150000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1 amount = 7500
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1 amount = 3000
+                }
+		add_political_power = 150
+        add_stability = 0.05
+		add_war_support = 0.05
+
+	}
+}
+
+country_event = { #독일이 우리를 외면하다!
+	id = korfri.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.3"}
+	title = korfri.3.t
+	desc = korfri.3.d
+	is_triggered_only = yes
+	option = { #망할 팔병신 카이저!
+		name = korfri.3.a
+		add_political_power = -150
+                add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = { #독일이 우리에게 경고하다!
+	id = korfri.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.4"}
+	title = korfri.4.t
+	desc = korfri.4.d
+	is_triggered_only = yes
+	option = { #황군을 막을 적은 없다!
+		name = korfri.4.a
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = 150
+                add_stability = 0.10
+		add_war_support = 0.10
+		GER = {
+			country_event = {
+				id = korfri.5 days = 2
+			}
+		}
+	}
+
+	option = { #물러나라
+		name = korfri.4.b
+		ai_chance = {
+			factor = 30
+		}
+		KOR = { white_peace_with_ROOT = yes }
+		SIB = { white_peace_with_ROOT = yes }
+		QIE = { white_peace_with_ROOT = yes }
+		CHI = { white_peace_with_ROOT = yes }
+		FNG = { white_peace_with_ROOT = yes }
+		TRM = { white_peace_with_ROOT = yes }
+		GER = { white_peace_with_ROOT = yes }
+		GEA = { white_peace_with_ROOT = yes }
+		AOG = { white_peace_with_ROOT = yes }
+		PRF = { white_peace_with_ROOT = yes }
+		SIA = { white_peace_with_ROOT = yes }
+		INC = { white_peace_with_ROOT = yes }
+		VIE = { white_peace_with_ROOT = yes }
+		LAO = { white_peace_with_ROOT = yes }
+		CAM = { white_peace_with_ROOT = yes }
+		HAW = { white_peace_with_ROOT = yes }
+		"PHI" = { white_peace_with_ROOT = yes }
+		add_political_power = -150
+        add_stability = -0.15
+		add_war_support = -0.15
+		GER = {
+			country_event = {
+				id = korfri.6 days = 2
+			}
+		}
+		KOR = {
+			country_event = {
+				id = korfri.6 days = 2
+			}
+		}
+	}
+}
+
+country_event = { #일본은 전쟁을 강행한다!
+	id = korfri.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.5"}
+	title = korfri.5.t
+	desc = korfri.5.d
+	is_triggered_only = yes
+	option = { #한국에 더 많은 지원을 보내라!
+		name = korfri.5.a
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = 75
+		KOR = {
+			country_event = {
+				id = korfri.7 days = 2
+			}
+		}
+	}
+
+	option = { #한국을 동맹에 초청하라!
+		name = korfri.5.b
+		ai_chance = {
+			factor = 30
+		}
+		add_to_faction = KOR
+		add_political_power = 25
+		KOR = {
+			country_event = {
+				id = korfri.8 days = 2
+			}
+		}
+		JAP = {
+			country_event = {
+				id = korfri.9 days = 2
+			}
+		}
+	}
+}
+
+country_event = { #일본이 물러나다
+	id = korfri.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.6"}
+	title = korfri.6.t
+	desc = korfri.6.d
+	is_triggered_only = yes
+	option = { #또 다시 외교가 승리를 거두었다!
+		name = korfri.6.a
+        add_stability = 0.10
+		add_political_power = 150
+	}
+}
+
+country_event = { #독일의 2차 지원
+	id = korfri.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.7"}
+	title = korfri.7.t
+	desc = korfri.7.d
+	is_triggered_only = yes
+	option = { #우리는 반드시 승리한다!
+		name = korfri.7.a
+		add_war_support = 0.10
+		add_manpower = 300000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1 amount = 12500
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1 amount = 5000
+        }
+	}
+}
+
+country_event = { #독일은 우리와 동맹을 체결했다
+	id = korfri.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.8"}
+	title = korfri.8.t
+	desc = korfri.8.d
+	is_triggered_only = yes
+	option = { #이제 우리는 지지 않겠군
+		name = korfri.8.a
+        add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #독일은 한국과 동맹을 체결했다
+	id = korfri.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.9"}
+	title = korfri.9.t
+	desc = korfri.9.d
+	is_triggered_only = yes
+	option = { #그들이 오기도 전에 우리는 승리할 것이다!
+		name = korfri.9.a
+        add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #천벌작전
+	id = korfri.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfri.10"}
+	title = korfri.10.t
+	desc = korfri.10.d
+	fire_only_once = yes
+	trigger = {
+		tag = KOR
+		has_war_with = JAP
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = { #목표는 규슈와 주고쿠, 시코쿠 점령이다!
+		name = korfri.10.a
+		add_war_support = 0.01
+		custom_effect_tooltip = KOR_JAP_WAR
+	}
+}
+
+# 토후 연맹 협상국과의 평화협정
+country_event = {
+	id = fprf.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event fprf.1"}
+	title = prf.160.t
+	desc = prf.160.d
+	picture = GFX_report_event_PRF_war
+
+	trigger = {
+		OR = {
+			tag = PRF
+		}
+		OR = {
+			is_in_faction_with = KOR
+		}
+		has_war_with = DEH
+		controls_state = 439 #Delhi
+		controls_state = 443 #Sindh
+		surrender_progress < 0.2
+		DEH = {
+			is_in_faction = yes
+			NOT = { is_faction_leader = yes }
+			NOT = { has_idea = DEH_considering_peace }
+			surrender_progress > 0.8
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = prf.160.a #Propose an armistice!
+		ai_chance = { factor = 100 }
+		DEH = {
+			add_timed_idea = { idea = DEH_considering_peace days = 180 }
+		}
+		random_country = {
+			limit = {
+				DEH = { is_in_faction_with = PREV }
+				is_faction_leader = yes
+			}
+			country_event = { id = fprf.2 }
+		}
+	}
+	option = {
+		name = prf.160.b #We shall fight on!
+		ai_chance = { factor = 0 }
+		add_war_support = -0.30
+	}
+}
+
+# Faction leader considers armistice
+country_event = {
+	id = fprf.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event fprf.2"}
+	title = prf.161.t
+	desc = prf.161.d
+	picture = GFX_report_event_PRF_war
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { save_event_target_as = white_peace_receiver }
+	}
+
+	option = {
+		name = prf.161.a #We have no choice but to accept
+		ai_chance = { factor = 100 }
+		add_political_power = -100
+		KOR = { white_peace_with_ROOT = yes }
+		FNG = { white_peace_with_ROOT = yes }
+		TRM = { white_peace_with_ROOT = yes }
+		GER = { white_peace_with_ROOT = yes }
+		QIE = { white_peace_with_ROOT = yes }
+		AOG = { white_peace_with_ROOT = yes }
+		RUS = { white_peace_with_ROOT = yes }
+		SIA = { white_peace_with_ROOT = yes }
+		HAW = { white_peace_with_ROOT = yes }
+		"PHI" = { white_peace_with_ROOT = yes }
+		DEH = { white_peace_with_TARGET = yes }
+		PRF = { annex_country = { target = DEH } }
+	}
+	option = {
+		name = prf.161.b #No! The Delhi Government shall be restored!
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				FROM = { surrender_progress < 0.1 }
+			}
+			modifier = {
+				factor = 0
+				any_country = {
+					has_war_with = ROOT
+					is_major = yes
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = fprf.3 days = 1 }
+		}
+	}
+}
+
+# Notification
+country_event = {
+	id = fprf.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event fprf.3"}
+	title = prf.162.t
+	desc = prf.162.d
+	picture = GFX_report_event_PRF_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = prf.162.a #Withdraw? Never!
+		ai_chance = { factor = 50 }
+		add_political_power = 100
+	}
+	option = {
+		name = prf.162.b #Aargh - fine. We want this war over with
+		ai_chance = { factor = 50 }
+		DEH = { white_peace_with_ROOT = yes }
+	}
+}
+
+country_event = { #몽골의 운명
+	id = korex.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.1"}
+	title = korex.1.t
+	desc = korex.1.d
+	
+	is_triggered_only = yes
+
+	immediate = {
+		determine_chinese_ally = yes
+		hidden_effect = {
+			MON = {
+				if = {
+					limit = {
+						has_country_flag = MON_was_puppeted
+					}
+					kill_country_leader = yes
+				}
+				load_focus_tree = {
+					tree = Mongolia_Puppet
+					keep_completed = yes
+				}
+			}
+		}
+	}
+	
+	option = { # 몽골 괴뢰화
+		name = korex.1.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			is_han_chinese_tag = no
+			any_owned_state = {
+				region = 222 #Inner Mongolia
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_not_claim_or_core_of_ROOT = yes
+				OR = {
+					region = 152 #Outer Mongolia
+					region = 222 #Inner Mongolia
+				}
+			}
+			MON = {
+				add_state_core = PREV
+				transfer_state = PREV
+			}
+		}
+		puppet = MON
+		KOR = {
+			country_event = {
+				id = korex.2
+			}
+		}
+	}
+
+	option = { # 몽골 합병
+		name = korex.1.b
+		ai_chance = {
+			factor = 0
+		}
+		occupy_medium_country = yes
+		set_country_flag = MON_CONQ
+	}
+}
+
+country_event = { #몽골의 새 군주
+	id = korex.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.2"}
+	title = korex.2.t
+	desc = korex.2.d
+	is_triggered_only = yes
+
+	option = { #몽골
+		name = korex.2.a
+		MON = {
+			country_event = {
+				id = korex.3
+			}
+		}
+	}
+}
+
+country_event = { #덕왕
+	id = korex.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.3"}
+	title = korex.3.t
+	desc = korex.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = korex.3.a
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_democrat
+					}
+				}
+			}
+			MON = {
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 31
+						social_liberal = 13
+						market_liberal = 23
+						social_conservative = 16
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					MON_Dambyn_Chagdarjav_hog_sde
+					MON_Sonombalzhiryn_Buyannemeh_for_sde
+					MON_Bazaryn_Shirendev_eco_sde
+					MON_Shirnengiin_Ayuush_sec_sde
+					MON_Manlaibaatar_Damdinsueren_cos_sco
+					MON_Khorloogiin_Choibalsan_carm_sco
+					MON_Choimbolyn_Shagdarsuren_cair_sco
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_liberal
+					}
+				}
+			}
+			MON = {
+				set_politics = {
+					ruling_party = social_liberal
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 13
+						social_liberal = 31
+						market_liberal = 16
+						social_conservative = 23
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					MON_Altanochir_hog_sli
+					MON_Jamsrangiin_Tseveen_for_sli
+					MON_Bazaryn_Shirendev_eco_sde
+					MON_Shirnengiin_Ayuush_sec_sde
+					MON_Manlaibaatar_Damdinsueren_cos_sco
+					MON_Khorloogiin_Choibalsan_carm_sco
+					MON_Choimbolyn_Shagdarsuren_cair_sco
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = market_liberal
+					}
+				}
+			}
+			MON = {
+				set_politics = {
+					ruling_party = market_liberal
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 31
+						social_conservative = 16
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					MON_Uenenbayan_hog_sco
+					MON_Balingiin_Tserendorj_for_ade
+					MON_Amurlingkui_eco_ade
+					MON_Songjin_Wangchucg_sec_ade
+					MON_Manlaibaatar_Damdinsueren_cos_sco
+					MON_Khorloogiin_Choibalsan_carm_sco
+					MON_Choimbolyn_Shagdarsuren_cair_sco
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_conservative
+					}
+				}
+			}
+			MON = {
+				set_politics = {
+					ruling_party = social_conservative
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 16
+						social_conservative = 31
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					MON_Uenenbayan_hog_sco
+					MON_Balingiin_Tserendorj_for_ade
+					MON_Amurlingkui_eco_ade
+					MON_Songjin_Wangchucg_sec_ade
+					MON_Manlaibaatar_Damdinsueren_cos_sco
+					MON_Khorloogiin_Choibalsan_carm_sco
+					MON_Choimbolyn_Shagdarsuren_cair_sco
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = authoritarian_democrat
+					}
+				}
+			}
+			MON = {
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 16
+						social_conservative = 8
+						authoritarian_democrat = 31
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					MON_Yondonwangchug_hog_ade
+					MON_Balingiin_Tserendorj_for_ade
+					MON_Amurlingkui_eco_ade
+					MON_Songjin_Wangchucg_sec_ade
+					MON_Manlaibaatar_Damdinsueren_cos_sco
+					MON_Khorloogiin_Choibalsan_carm_sco
+					MON_Choimbolyn_Shagdarsuren_cair_sco
+				}
+			}
+		}
+		create_country_leader = {
+			name = "Demchugdongrub"
+			desc = "POLITICS_DEMCHUGDONGRUB_DEMOCRATIC_DESC"
+			picture = "Portrait_MON_Demchugdongrub.tga"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = {
+				MON_the_popular_prince_trait
+			}
+		}
+		create_country_leader = {
+			name = "Demchugdongrub"
+			desc = "POLITICS_DEMCHUGDONGRUB_DEMOCRATIC_DESC"
+			picture = "Portrait_MON_Demchugdongrub.tga"
+			expire = "1965.1.1"
+			ideology = social_liberal_subtype
+			traits = {
+				MON_the_popular_prince_trait
+			}
+		}
+		create_country_leader = {
+			name = "Demchugdongrub"
+			desc = "POLITICS_DEMCHUGDONGRUB_DEMOCRATIC_DESC"
+			picture = "Portrait_MON_Demchugdongrub.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = {
+				MON_the_popular_prince_trait
+			}
+		}
+		create_country_leader = {
+			name = "Demchugdongrub"
+			desc = "POLITICS_DEMCHUGDONGRUB_DEMOCRATIC_DESC"
+			picture = "Portrait_MON_Demchugdongrub.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = {
+				MON_the_popular_prince_trait
+			}
+		}
+		create_country_leader = {
+			name = "Demchugdongrub"
+			desc = "POLITICS_DEMCHUGDONGRUB_DEMOCRATIC_DESC"
+			picture = "Portrait_MON_Demchugdongrub.tga"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {
+				MON_the_popular_prince_trait
+			}
+		}
+		set_cosmetic_tag = MON_state
+	}
+}
+
+country_event = { #청나라 신정부
+	id = korex.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.5"}
+	title = korex.5.t
+	desc = korex.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = korex.5.a
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_popularities = {
+				totalist = 1
+				syndicalist = 2
+				radical_socialist = 2
+				social_democrat = 23
+				social_liberal = 15
+				market_liberal = 4
+				social_conservative = 43
+				authoritarian_democrat = 5
+				paternal_autocrat = 3
+				national_populist = 2
+			}
+		}
+		remove_all_ministers = yes
+		remove_ideas_with_trait = chief_of_staff
+		remove_ideas_with_trait = chief_of_army
+		remove_ideas_with_trait = chief_of_navy
+		remove_ideas_with_trait = chief_of_air_force
+		add_ideas = {
+			QIE_Aisin_Gioro_Pujie_hog_sco
+			QIE_Philip_ZC_Diao_for_sco
+			QIE_Zhang_Guogan_eco_sco
+			QIE_Aisin_Gioro_Pujin_sec_sco
+			QIE_Wang_Tingzhen_cos
+			QIE_Jin_Yun'e_carm
+			QIE_Aisin_Gioro_Zaixun_cnav
+			QIE_Li_Ruyan_cair
+		}
+		add_stability = -0.1
+	}
+}
+
+country_event = { #시베리아 차르국 선포
+	id = korex.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.6"}
+	title = korex.6.t
+	desc = korex.6.d
+	fire_only_once = yes
+	trigger = {
+		tag = KOR
+		SIB = {
+			is_subject_of = KOR
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = { #선포
+		name = korex.6.a
+		SIB = {
+			country_event = {
+				id = korex.7
+			}
+		}
+	}
+	option = { #쓸모 없는 짓이다.
+		name = korex.6.b
+		SIB = {
+			country_event = {
+				id = korex.8
+			}
+		}
+	}
+}
+
+country_event = { #시베리아 차르국 수립
+	id = korex.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.7"}
+	title = korex.7.t
+	desc = korex.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = korex.7.a
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_democrat
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 31
+						social_liberal = 13
+						market_liberal = 23
+						social_conservative = 16
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Alexander_Krasnoshchyokov_hog_sde
+					SIB_Mikhail_B_Shatila_for_sde
+					SIB_Alexander_E_Novoselov_eco_sde
+					SIB_Alexandra_Kim_sec_rso
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_liberal
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = social_liberal
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 13
+						social_liberal = 31
+						market_liberal = 16
+						social_conservative = 23
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Alexander_Krasnoshchyokov_hog_sde
+					SIB_Mikhail_B_Shatila_for_sde
+					SIB_Alexander_E_Novoselov_eco_sde
+					SIB_Alexandra_Kim_sec_rso
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = market_liberal
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = market_liberal
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 31
+						social_conservative = 16
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Ivan_Adrianovich_Mikhailov_hog_sco
+					SIB_Piotr_Yakovlevich_Derber_for_sco
+					SIB_Konstantin_Timiryazav_eco_ade
+					SIB_Timireva_Lazutkin_sec_ade
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_conservative
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = social_conservative
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 16
+						social_conservative = 31
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Ivan_Adrianovich_Mikhailov_hog_sco
+					SIB_Piotr_Yakovlevich_Derber_for_sco
+					SIB_Konstantin_Timiryazav_eco_ade
+					SIB_Timireva_Lazutkin_sec_ade
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = authoritarian_democrat
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 16
+						social_conservative = 8
+						authoritarian_democrat = 31
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Vassilij_Boldyrev_hog_ade
+					SIB_Aleksei_Gavrilovich_for_ade
+					SIB_Konstantin_Timiryazav_eco_ade
+					SIB_Timireva_Lazutkin_sec_ade
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		create_country_leader = {
+			name = "Jungchuwon of Siberia"
+			desc = ""
+			picture = "gfx/leaders/KOR/Portrait_KOR_Jungchuwon_of_Siberia.dds"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Jungchuwon of Siberia"
+			desc = ""
+			picture = "gfx/leaders/KOR/Portrait_KOR_Jungchuwon_of_Siberia.dds"
+			expire = "1965.1.1"
+			ideology = social_liberal_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Jungchuwon of Siberia"
+			desc = ""
+			picture = "gfx/leaders/KOR/Portrait_KOR_Jungchuwon_of_Siberia.dds"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Jungchuwon of Siberia"
+			desc = ""
+			picture = "gfx/leaders/KOR/Portrait_KOR_Jungchuwon_of_Siberia.dds"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Jungchuwon of Siberia"
+			desc = ""
+			picture = "gfx/leaders/KOR/Portrait_KOR_Jungchuwon_of_Siberia.dds"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {}
+		}
+		set_cosmetic_tag = SIB_state
+	}
+}
+
+country_event = { #시베리아 신정부 수립
+	id = korex.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.8"}
+	title = korex.8.t
+	desc = korex.8.d
+	is_triggered_only = yes
+
+	option = {
+		name = korex.8.a
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_democrat
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 31
+						social_liberal = 13
+						market_liberal = 23
+						social_conservative = 16
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Alexander_Krasnoshchyokov_hog_sde
+					SIB_Mikhail_B_Shatila_for_sde
+					SIB_Alexander_E_Novoselov_eco_sde
+					SIB_Alexandra_Kim_sec_rso
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_liberal
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = social_liberal
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 13
+						social_liberal = 31
+						market_liberal = 16
+						social_conservative = 23
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Alexander_Krasnoshchyokov_hog_sde
+					SIB_Mikhail_B_Shatila_for_sde
+					SIB_Alexander_E_Novoselov_eco_sde
+					SIB_Alexandra_Kim_sec_rso
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = market_liberal
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = market_liberal
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 31
+						social_conservative = 16
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Ivan_Adrianovich_Mikhailov_hog_sco
+					SIB_Piotr_Yakovlevich_Derber_for_sco
+					SIB_Konstantin_Timiryazav_eco_ade
+					SIB_Timireva_Lazutkin_sec_ade
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = social_conservative
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = social_conservative
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 16
+						social_conservative = 31
+						authoritarian_democrat = 8
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Ivan_Adrianovich_Mikhailov_hog_sco
+					SIB_Piotr_Yakovlevich_Derber_for_sco
+					SIB_Konstantin_Timiryazav_eco_ade
+					SIB_Timireva_Lazutkin_sec_ade
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					KOR = {
+						has_government = authoritarian_democrat
+					}
+				}
+			}
+			SIB = {
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 2
+						radical_socialist = 4
+						social_democrat = 23
+						social_liberal = 13
+						market_liberal = 16
+						social_conservative = 8
+						authoritarian_democrat = 31
+						paternal_autocrat = 0
+						national_populist = 2
+					}
+				}
+				remove_all_ministers = yes
+				remove_ideas_with_trait = chief_of_staff
+				remove_ideas_with_trait = chief_of_army
+				remove_ideas_with_trait = chief_of_navy
+				remove_ideas_with_trait = chief_of_air_force
+				add_ideas = {
+					SIB_Vassilij_Boldyrev_hog_ade
+					SIB_Aleksei_Gavrilovich_for_ade
+					SIB_Konstantin_Timiryazav_eco_ade
+					SIB_Timireva_Lazutkin_sec_ade
+					SIB_Nikolay_Matveyev_cos_rso
+					SIB_Konstantin_Telegin_carm_syn
+					SIB_Valerik_Lesik_cnav_ade
+					SIB_Lev_Schurkin_cair_ade
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = korex.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.9"}
+	title = korex.9.t
+	desc = korex.9.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = korex.9.a
+		add_political_power = 150
+		set_cosmetic_tag = KOR_JAP_EMPIRE
+		KOR = { country_event = { id = korex.10 days = 9 } }
+		KOR = { country_event = { id = korea.19 days = 1 } }
+		hidden_effect = { news_event = { id = worldnews.1600 days = 1 } }
+	}
+}
+
+country_event = { # 국명 변경?
+	id = korex.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korex.10"}
+	title = korex.10.t
+	desc = korex.10.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = { # 변경
+		name = korex.10.a
+		ai_chance = { factor = 90 }
+		KOR = {
+			set_cosmetic_tag = KOR_Haedong
+		}
+		hidden_effect = { news_event = { id = worldnews.1700 days = 1 } }
+	}
+	
+	option = { # 유지
+		name = korex.10.b
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = { # 한국과의 거래?(도쿄)
+	id = korfjap.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfjap.1"}
+	title = korfjap.1.t
+	desc = korfjap.1.d
+	
+	is_triggered_only = yes
+	
+	option = { # 승인
+		name = korfjap.1.a
+		ai_chance = { factor = 100 }
+		diplomatic_relation = {
+			country = FNG
+			relation = guarantee
+			active = no
+		}
+		diplomatic_relation = {
+			country = FNG
+			relation = military_access
+			active = no
+		}
+		KOR = {
+			country_event = {
+				id = korfjap.2 days = 3
+			}
+		}
+	}
+}
+
+country_event = { # 일본의 승인
+	id = korfjap.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfjap.2"}
+	title = korfjap.2.t
+	desc = korfjap.2.d
+	
+	is_triggered_only = yes
+	
+	option = { # 계획대로다
+		name = korfjap.2.a
+		ai_chance = { factor = 100 }
+		FNG = {
+			country_event = {
+				id = korfjap.3 days = 3
+			}
+		}
+	}
+}
+
+country_event = { # 일본의 승인
+	id = korfjap.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfjap.3"}
+	title = korfjap.3.t
+	desc = korfjap.3.d
+	
+	is_triggered_only = yes
+	
+	option = { # 망할놈들
+		name = korfjap.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { # 거래 이행
+	id = korfjap.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfjap.4"}
+	title = korfjap.4.t
+	desc = korfjap.4.d
+	
+	is_triggered_only = yes
+	
+	option = { # 아주 좋군
+		name = korfjap.4.a
+		diplomatic_relation = {
+			country = KOR
+			relation = guarantee
+			active = yes
+		}
+		diplomatic_relation = {
+			country = KOR
+			relation = military_access
+			active = yes
+		}
+		add_ideas = KOR_JAP_YN
+		KOR = {
+			country_event = {
+				id = korfjap.5 days = 3
+			}
+		}
+	}
+}
+
+country_event = { # 거래 이행
+	id = korfjap.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfjap.5"}
+	title = korfjap.5.t
+	desc = korfjap.5.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korfjap.5.a
+		diplomatic_relation = {
+			country = JAP
+			relation = guarantee
+			active = yes
+		}
+		diplomatic_relation = {
+			country = JAP
+			relation = military_access
+			active = yes
+		}
+		add_ideas = KOR_NN
+	}
+}
+
+country_event = { # 한국과의 거래?(베이징)
+	id = korfchi.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfchi.1"}
+	title = korfchi.1.t
+	desc = korfchi.1.d
+	
+	is_triggered_only = yes
+	
+	option = { # 승인
+		name = korfchi.1.a
+		ai_chance = { factor = 100 }
+		set_country_flag = KOR_CHI_A
+		KOR = {
+			country_event = {
+				id = korfchi.2 days = 3
+			}
+		}
+	}
+}
+
+country_event = { # 베이징의 승인
+	id = korfchi.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfchi.2"}
+	title = korfchi.2.t
+	desc = korfchi.2.d
+	
+	is_triggered_only = yes
+	
+	option = { # 계획대로다
+		name = korfchi.2.a
+		ai_chance = { factor = 100 }
+		FNG = {
+			country_event = {
+				id = korfchi.3 days = 3
+			}
+		}
+		custom_effect_tooltip =  KOR_FNG_WAR
+	}
+}
+
+country_event = {
+	id = korfchi.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfchi.3"}
+	title = korfchi.3.t
+	desc = korfchi.3.d
+	
+	is_triggered_only = yes
+	
+	option = { # 망할놈들
+		name = korfchi.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = korfchi.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfchi.4"}
+	title = korfchi.4.t
+	desc = korfchi.4.d
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = KOR_CHI_A
+		FNG = {
+			has_war_with = KOR
+		}
+	}
+	
+	option = { # 진군하라
+		name = korfchi.4.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+			target = FNG
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { # 거래 이행
+	id = korfchi.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfchi.5"}
+	title = korfchi.5.t
+	desc = korfchi.5.d
+	
+	is_triggered_only = yes
+	
+	option = { # 아주 좋군
+		name = korfchi.5.a
+		add_ideas = KOR_MAN_Y
+		if = {
+			limit = {
+				610 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 610
+			}
+		}
+		if = {
+			limit = {
+				715 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 715
+			}
+		}
+		if = {
+			limit = {
+				884 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 884
+			}
+		}
+		if = {
+			limit = {
+				714 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 714
+			}
+		}
+		if = {
+			limit = {
+				883 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 883
+			}
+		}
+		if = {
+			limit = {
+				717 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 717
+			}
+		}
+		if = {
+			limit = {
+				745 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 745
+			}
+		}
+		if = {
+			limit = {
+				716 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 716
+			}
+		}
+		if = {
+			limit = {
+				886 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 886
+			}
+		}
+		if = {
+			limit = {
+				885 = {
+					is_controlled_by = KOR
+				}
+			}
+			FROM = {
+				transfer_state = 885
+			}
+		}
+		KOR = {
+			country_event = {
+				id = korfchi.6 days = 3
+			}
+		}
+	}
+}
+
+country_event = { # 거래 이행
+	id = korfchi.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfchi.6"}
+	title = korfchi.6.t
+	desc = korfchi.6.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korfchi.6.a
+		add_ideas = KOR_MAN_Y
+	}
+}

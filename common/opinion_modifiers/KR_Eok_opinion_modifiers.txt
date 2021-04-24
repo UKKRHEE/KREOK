@@ -1,0 +1,44 @@
+opinion_modifiers = {
+
+	### Korea
+	
+	KOR_friendship_with_korea = {
+		value = 50
+	}
+	
+	KOR_ask_the_qing = {
+		value = -50
+	}
+
+	KOR_ask_the_japan = {
+		value = -50
+	}
+
+	KOR_siam_okay = {
+		value = 50
+	}
+
+	KOR_siam_refuse = {
+		value = -50
+	}
+
+	KOR_India_okay = {
+		value = 50
+	}
+
+	KOR_India_refuse = {
+		value = -50
+	}
+	
+	KOR_sibrail_ok = {
+		value = 50
+	}
+
+	KOR_sibrail_refuse = {
+		value = -50
+	}
+	
+	KOR_Qing_ultimatum = {
+		value = -75
+	}
+}

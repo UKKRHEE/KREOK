@@ -1,0 +1,23 @@
+﻿l_english:
+
+ # Radio EoK Anthem Playlist
+ anthem_empire:0 "애국가"
+ anthem_democratic:0 "애국가(민주주의 한국)"
+ anthem_communism:0 "애국가(사회주의)"
+ anthem_fascism:0 "아리랑 겨레"
+ 
+ # Radio EoK War Song Playlist
+ fuck_communism:0 "멸공의 횃불"
+ hero_song:0 "독립군가"
+ going_frontline:0 "전선을 간다"
+ katyusha:0 "카츄샤(한국어 변안)"
+ hereiam:0 "여기에 섰다"
+ final_5minutes:0 "최후의 5분"
+ 
+ # Radio EoK Peace Song Playlist
+ paldo:0 "팔도 사나이"
+ internationale:0 "인터내셔널가(한국어 변안)"
+ fatherland_korea:0 "조국찬가"
+ korea_the_beautiful:0 "아름다운 나라"
+ 
+ radioeok_TITLE:0 "제국의 목소리"

@@ -1,0 +1,116 @@
+spriteTypes = {
+
+	###Korea###
+	SpriteType = {
+		name = "GFX_goal_flag_korea"
+		texturefile = "gfx/interface/goals/goal_flag_korea.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_attack"
+		texturefile = "gfx/interface/goals/goal_KOR_attack.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_cheoldo"
+		texturefile = "gfx/interface/goals/goal_KOR_cheoldo.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_coup"
+		texturefile = "gfx/interface/goals/goal_KOR_coup.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_crush"
+		texturefile = "gfx/interface/goals/goal_KOR_crush.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_deal"
+		texturefile = "gfx/interface/goals/goal_KOR_deal.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_dragon_under_tiger"
+		texturefile = "gfx/interface/goals/goal_KOR_dragon_under_tiger.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_empire_of_korea"
+		texturefile = "gfx/interface/goals/goal_KOR_empire_of_korea.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_housing_act"
+		texturefile = "gfx/interface/goals/goal_KOR_housing_act.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_hwalang"
+		texturefile = "gfx/interface/goals/goal_KOR_hwalang.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_ihwa"
+		texturefile = "gfx/interface/goals/goal_KOR_ihwa.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_jail_reactionaries"
+		texturefile = "gfx/interface/goals/goal_KOR_jail_reactionaries.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_korean_government"
+		texturefile = "gfx/interface/goals/goal_KOR_korean_government.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_korean_military"
+		texturefile = "gfx/interface/goals/goal_KOR_korean_military.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_korean_miracle"
+		texturefile = "gfx/interface/goals/goal_KOR_korean_miracle.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_kyungoh"
+		texturefile = "gfx/interface/goals/goal_KOR_kyungoh.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_loyal"
+		texturefile = "gfx/interface/goals/goal_KOR_loyal.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_military_reform"
+		texturefile = "gfx/interface/goals/goal_KOR_military_reform.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_stand_with_japan"
+		texturefile = "gfx/interface/goals/goal_KOR_stand_with_japan.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_strong_hand"
+		texturefile = "gfx/interface/goals/goal_KOR_strong_hand.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_uprising"
+		texturefile = "gfx/interface/goals/goal_KOR_uprising.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_eagle"
+		texturefile = "gfx/interface/goals/goal_KOR_eagle.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_gendarmerie"
+		texturefile = "gfx/interface/goals/goal_KOR_gendarmerie.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_japan_trade"
+		texturefile = "gfx/interface/goals/goal_KOR_japan_trade.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_morning_sun"
+		texturefile = "gfx/interface/goals/goal_KOR_morning_sun.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_patriotism"
+		texturefile = "gfx/interface/goals/goal_KOR_patriotism.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_one_party"
+		texturefile = "gfx/interface/goals/goal_KOR_one_party.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_KOR_hegemony"
+		texturefile = "gfx/interface/goals/goal_KOR_hegemony.tga"
+	}
+}

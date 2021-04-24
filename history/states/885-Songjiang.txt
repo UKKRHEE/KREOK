@@ -1,0 +1,26 @@
+state = {
+	id = 885
+	name = "STATE_885"
+	manpower = 1218500
+
+	state_category = four
+
+	history = {
+		owner = FNG
+		add_core_of = FNG
+		add_claim_by = QIE
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			12412 15
+		}
+	}
+
+	provinces = {
+		12412 10433 12355 7670 10503 10376
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=1102
+	name="STATE_1102" #함경북도(Northern Hamgyeong)
+	manpower=584105
+
+	state_category = two
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			6822 5
+		}
+		victory_points = {
+			6944 5
+		}
+		add_core_of = KOR
+	}
+	
+	provinces={
+		6822 6944 898 3860 959
+	}	
+}

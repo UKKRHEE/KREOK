@@ -1,0 +1,182 @@
+music_station = "radioeok"
+
+# Anthem
+
+music = {
+	song = "anthem_empire"
+		chance = {
+		modifier = {
+			factor = 1
+			original_tag = KOR
+			NOT = {
+				has_socialist_government = yes
+			}
+		}
+	}
+}
+
+music = {
+	song = "anthem_communism"
+	chance = {
+		modifier = {
+			factor = 1
+			original_tag = KOR
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "anthem_fascism"
+	chance = {
+		modifier = {
+			factor = 1
+			original_tag = KOR
+			OR = {
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				has_government = national_populist
+			}
+		}
+	}
+}
+
+# War Song
+
+music = {
+	song = "fuck_communism"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war_with = SOV
+			has_war_with = FRA
+			has_war_with = ENG
+			has_war_with = CSA
+			NOT = {
+				has_socialist_government = yes
+			}
+		}
+	}
+}
+
+music = {
+	song = "going_frontline"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "katyusha"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war = yes
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "hereiam"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war = yes
+			NOT = {
+				OR = {
+					has_socialist_government = yes
+					has_government = authoritarian_democrat
+					has_government = paternal_autocrat
+					has_government = national_populist
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "final_5minutes"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war = yes
+			OR = {
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				has_government = national_populist
+			}
+		}
+	}
+}
+
+# Peace Song
+
+music = {
+	song = "paldo"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "internationale"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war = no
+			OR = {
+				has_socialist_government = yes
+				has_government = social_democrat
+			}
+		}
+	}
+}
+
+music = {
+	song = "fatherland_korea"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war = no
+			OR = {
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				has_government = national_populist
+			}
+		}
+	}
+}
+
+music = {
+	song = "korea_the_beautiful"
+	chance = {
+		modifier = {
+			factor = 2
+			original_tag = KOR
+			has_war = no
+			NOT = {
+				OR = {
+					has_socialist_government = yes
+					has_government = authoritarian_democrat
+					has_government = paternal_autocrat
+					has_government = national_populist
+				}
+			}
+		}
+	}
+}

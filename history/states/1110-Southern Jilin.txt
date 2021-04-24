@@ -1,0 +1,22 @@
+state = {
+	id = 1110
+	name = "STATE_1110"
+	manpower = 429000
+
+	state_category = four
+
+	history = {
+		owner = KOR
+		add_core_of = KOR
+		add_claim_by = FNG
+		add_claim_by = QIE
+
+		buildings = {
+			infrastructure = 4
+		}
+	}
+
+	provinces = {
+		3849 887 3913 9866 3932 6947 9913 946 11850 9883 11862 3947 9928
+	}
+}

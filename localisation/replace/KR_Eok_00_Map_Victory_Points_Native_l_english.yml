@@ -1,0 +1,59 @@
+﻿l_english:
+
+endo_vp_1150:0 "대련"
+endo_vp_11771:0 "심양"
+endo_vp_12412:0 "합이빈"
+#
+endo_vp_4052:0 "평양"
+endo_vp_4056:0 "부산"
+endo_vp_7125:0 "한성"
+endo_vp_4126:0 "광주"
+endo_vp_7204:0 "대전"
+endo_vp_11912:0 "포항"
+endo_vp_3981:0 "함흥"
+endo_vp_848:0 "원산"
+endo_vp_1177:0 "제주"
+endo_vp_11835:0 "신의주"
+endo_vp_6822:0 "청진"
+endo_vp_6944:0 "나진"
+endo_vp_12040:0 "개성"
+endo_vp_1148:0 "춘천"
+endo_vp_7121:0 "포항"
+endo_vp_4086:0 "대구"
+endo_vp_10110:0 "광주"
+endo_vp_7221:0 "인천"
+endo_vp_10065:0 "황주"
+
+### 지명 변경 - 일본이 점령(한국) ###
+endo_vp_7125_japanese:0 "케이조"
+endo_vp_4052_japanese:0 "헤이조"
+endo_vp_4056_japanese:0 "후산"
+
+### 지명 변경 - 일본이 점령(만주) ###
+endo_vp_1150_japanese:0 "다롄"
+
+### 지명 변경 - 중국이 점령(만주) ###
+endo_vp_11771_chinese:0 "묵던"
+endo_vp_12412_chinese:0 "하얼빈"
+
+### 지명 변경 - 한국이 점령(만주) ###
+endo_vp_9873_korean:0 "성도"
+endo_vp_934_korean:0 "조양"
+endo_vp_1588_korean:0 "제제합이"
+
+### 지명 변경 - 한국이 점령(중원) ###
+endo_vp_9843_korean:0 "북경"
+endo_vp_10068_korean:0 "천진"
+endo_vp_7014_korean:0 "상해"
+
+### 지명 변경 - 한국이 점령(일본) ###
+endo_vp_1182_korean:0 "동경"
+endo_vp_7186_korean:0 "대북"
+endo_vp_12068_korean:0 "고웅"
+endo_vp_13025_korean:0 "유황"
+endo_vp_12446_korean:0 "남부상"
+
+### 지명 변경 - 한국이 점령(러샤) ###
+endo_vp_957_korean:0 "해삼위"
+endo_vp_7763_korean:0 "해란포"
+endo_vp_12559_korean:0 "니항"

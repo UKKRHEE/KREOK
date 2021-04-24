@@ -1,0 +1,29 @@
+#####################
+# 카라 대한제국 모드 국가원수 트레잇
+#####################
+
+leader_traits = {
+	KOR_handsome_emperor ### 수려한 황제
+		random = no
+		stability_factor = 0.15
+		political_power_factor = 0.03
+	}
+	KOR_retired_war_hero ### 퇴역한 전쟁영웅
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.15
+	}
+	KOR_daemagliji ### 대막리지
+		random = no
+		stability_factor = -0.15
+		war_support_factor = 0.15
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+	}
+	KOR_puppet_monarch ### 꼭두각시 군주
+		random = no
+		stability_factor = -0.10
+		war_support_factor = -0.10
+		political_power_factor = -0.10
+	}
+}

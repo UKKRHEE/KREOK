@@ -1,0 +1,9 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_radioeok_album_art"
+		texturefile = "gfx/radioeok_album_art.dds"
+		noOfFrames = 2
+	}	
+
+}

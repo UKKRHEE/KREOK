@@ -1,0 +1,859 @@
+﻿###########################
+# 제2차 조일전쟁 평화 협상
+###########################
+
+add_namespace = korjapf
+add_namespace = korfngd
+
+country_event = { #열도 상륙 성공
+	id = korjapf.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.1"}
+	title = korjapf.1.t
+	desc = korjapf.1.d
+	fire_only_once = yes
+	trigger = {
+		tag = KOR
+		has_war_with = JAP
+		is_subject = no
+		528 = {
+			OR = {
+				is_controlled_by = KOR
+				controller = { is_subject_of = KOR }
+				AND = {
+					controller = { is_in_faction_with = KOR }
+					KOR = { is_faction_leader = yes }
+				}
+			}
+		}
+		529 = {
+			OR = {
+				is_controlled_by = KOR
+				controller = { is_subject_of = KOR }
+				AND = {
+					controller = { is_in_faction_with = KOR }
+					KOR = { is_faction_leader = yes }
+				}
+			}
+		}
+		530 = {
+			OR = {
+				is_controlled_by = KOR
+				controller = { is_subject_of = KOR }
+				AND = {
+					controller = { is_in_faction_with = KOR }
+					KOR = { is_faction_leader = yes }
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = { #일본에 항복을 요구해라
+		name = korjapf.1.a
+		ai_chance = {
+			factor = 95
+		}
+		add_political_power = 400
+        add_stability = 0.30
+		JAP = {
+			country_event = {
+				id = korjapf.2 days = 2
+			}
+		}
+	}
+	option = { #push on
+		name = korjapf.1.b
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = -100
+        add_stability = -0.30
+        add_war_support = -0.30
+	}
+}
+
+country_event = { #낙일
+	id = korjapf.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.2"}
+	title = korjapf.2.t
+	desc = korjapf.2.d
+	is_triggered_only = yes
+	option = { #surrender
+		name = korjapf.2.a
+		ai_chance = {
+			factor = 100
+		}
+		set_global_flag = JAP_Fading_Sun
+		add_political_power = -100
+        add_stability = -0.30
+		add_war_support = -0.30
+		dismantle_faction = yes
+		
+		end_puppet = QIE
+		end_puppet = FNG
+		end_puppet = HAW
+		end_puppet = AST
+		end_puppet = TRM
+		end_puppet = "PHI"
+		end_puppet = SIA
+		end_puppet = NCH
+		end_puppet = LEC
+		end_puppet = INC
+		end_puppet = VIE
+		end_puppet = LAO
+		
+		KOR = { white_peace_with_ROOT = yes }
+		SIB = { white_peace_with_ROOT = yes }
+		QIE = { white_peace_with_ROOT = yes }
+		CHI = { white_peace_with_ROOT = yes }
+		FNG = { white_peace_with_ROOT = yes }
+		TRM = { white_peace_with_ROOT = yes }
+		GER = { white_peace_with_ROOT = yes }
+		GEA = { white_peace_with_ROOT = yes }
+		RUS = { white_peace_with_ROOT = yes }
+		SOV = { white_peace_with_ROOT = yes }
+		PRF = { white_peace_with_ROOT = yes }
+		SIA = { white_peace_with_ROOT = yes }
+		BUR = { white_peace_with_ROOT = yes }
+		LEC = { white_peace_with_ROOT = yes }
+		INC = { white_peace_with_ROOT = yes }
+		VIE = { white_peace_with_ROOT = yes }
+		LAO = { white_peace_with_ROOT = yes }
+		CAM = { white_peace_with_ROOT = yes }
+		HAW = { white_peace_with_ROOT = yes }
+		"PHI" = { white_peace_with_ROOT = yes }
+
+		if = {
+			limit = {
+				FNG = {
+					has_war_with = KOR
+				}
+			}
+			KOR = {
+				annex_country = {
+					target = FNG transfer_troops = no
+				}
+			}
+		}
+
+		KOR = {
+			transfer_state = 524
+			transfer_state = 528
+			transfer_state = 530
+			transfer_state = 536
+			transfer_state = 537
+			transfer_state = 555
+			transfer_state = 526
+			transfer_state = 645
+			transfer_state = 648
+		}
+		if = {
+			limit = {
+				OR = {
+					JAP = {
+						controls_state = 632
+					}
+				}
+			}
+			KOR = {
+				transfer_state = 632
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					JAP = {
+						controls_state = 631
+					}
+				}
+			}
+			KOR = {
+				transfer_state = 631
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					JAP = {
+						controls_state = 638
+					}
+				}
+			}
+			KOR = {
+				transfer_state = 638
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					HAW = {
+						is_in_faction_with = JAP
+					}
+					JAP = {
+						controls_state = 629
+					}
+				}
+			}
+			KOR = {
+				transfer_state = 629
+			}
+		}
+
+		set_global_flag = JAP_Defeated_CSX
+		set_country_flag = JAP_ISO
+		set_global_flag = JAP_ISO
+		clr_country_flag = JAP_EXP
+		clr_country_flag = JAP_EXP1
+		clr_country_flag = JAP_EXP2
+		clr_country_flag = JAP_GER1
+		clr_country_flag = JAP_GER2
+		clr_country_flag = JAP_RUS_CAMP
+		clr_country_flag = JAP_SIB_CAMP
+		clr_country_flag = JAP_MON_CAMP
+		clr_country_flag = JAP_RUS
+		clr_country_flag = JAP_MONRUS_CAMP
+		clr_country_flag = JAP_WEAK
+		clr_country_flag = JAP_COLONY
+		clr_country_flag = JAP_ANZAC
+		clr_country_flag = JAP_NUTS
+		remove_ideas = PROFF_LEG_CITIES
+		diplomatic_relation = {
+			country = LEC
+			relation = guarantee
+			active = no
+		}
+		diplomatic_relation = {
+			country = LEC
+			relation = military_access
+			active = no
+		}
+		KOR = {
+			country_event = {
+				id = korjapf.3
+			}
+		}
+		JAP = {
+			country_event = {
+				id = korjapf.4 days = 120
+			}
+		}
+	}
+	option = { #no surrender
+		name = korjapf.2.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -900
+        add_stability = -0.70
+        add_war_support = -0.70
+	}
+}
+
+country_event = { #일본 영토 코어
+	id = korjapf.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.3"}
+	title = korjapf.3.t
+	desc = korjapf.3.d
+	is_triggered_only = yes
+	option = {
+		name = korjapf.3.a
+		add_state_core = 524		
+		add_state_core = 528
+		add_state_core = 530
+		add_state_core = 536
+		add_state_core = 537
+		add_state_core = 555
+		add_state_core = 526
+		add_state_core = 645
+		add_state_core = 648
+		
+		if = {
+			limit = {
+				country_exists = LEC
+				LEC = { 
+					OR = {
+						has_government = social_democrat
+						has_government = social_liberal
+						has_government = market_liberal
+						has_government = social_conservative
+						has_government = authoritarian_democrat
+					}
+				}
+				NOT = {
+					has_socialist_government = yes
+				}
+			}
+			country_event = { id = korjapf.9 }
+		}
+		hidden_effect = {
+			# World News event
+			annex_country = {
+				target = TRM transfer_troops = no
+			}
+			if = {
+				limit = {
+					has_global_flag = NEWS_ALL
+				}
+				random_country = {
+					hidden_effect = { news_event = { id = worldnews.1400 days = 3 } }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #일본 혁명
+	id = korjapf.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.4"}
+	title = korjapf.4.t
+	desc = korjapf.4.d
+	is_triggered_only = yes
+	option = {
+		name = korjapf.4.a
+
+		add_political_power = -500
+        add_stability = -0.50
+
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_popularities = {
+				totalist = 26
+				syndicalist = 45
+				radical_socialist = 17
+				social_democrat = 5
+				social_liberal = 3
+				market_liberal = 2
+				social_conservative = 1
+				authoritarian_democrat = 1
+				paternal_autocrat = 0
+				national_populist = 0
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			JAP_Oyama_Ikuo_hog_syn
+			JAP_Yamamoto_Kenzo_for_syn
+			JAP_Yamada_Moritaro_eco_syn
+			JAP_Sakisaka_Itsuro_sec_rso
+		}
+		hidden_effect = {
+			# World News event
+			if = {
+				limit = {
+					has_global_flag = NEWS_ALL
+				}
+				random_country = {
+					hidden_effect = { news_event = { id = worldnews.1500 days = 3 } }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #일본의 운명
+	id = korjapf.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.5"}
+	title = korjapf.5.t
+	desc = korjapf.5.d
+	is_triggered_only = yes
+
+	option = { # 일본 괴뢰화
+		name = korjapf.5.a
+		ai_chance = {
+			factor = 50
+		}
+
+		every_state = {
+
+			limit = {
+				OR = {
+					state = 529
+					state = 531
+					state = 535
+					state = 532
+					state = 534
+					state = 282
+					state = 533
+				}
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+
+			JAP = {
+				transfer_state = PREV
+			}
+
+		}
+		puppet = JAP
+		KOR = {
+			country_event = {
+				id = korjapf.6
+			}
+		}
+	}
+
+	option = { # 일본 합병
+		name = korjapf.5.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = JAP_CONQ
+		occupy_large_country = yes
+		country_event = {
+			id = korea.19
+		}
+	}
+	
+	option = { # 이중 제국
+		name = korjapf.5.c
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = JAP_CONQ
+		occupy_large_country = yes
+		country_event = {
+			id = korex.9
+		}
+	}
+
+}
+
+country_event = { #일본의 새 군주
+	id = korjapf.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.6"}
+	title = korjapf.6.t
+	desc = korjapf.6.d
+	is_triggered_only = yes
+
+	option = { #영친왕
+		name = korjapf.6.a
+		ai_chance = {
+			factor = 50
+		}
+		JAP = {
+			country_event = {
+				id = korjapf.7
+			}
+		}
+	}
+
+	option = { #노부히토 친왕
+		name = korjapf.6.b
+		ai_chance = {
+			factor = 50
+		}
+		JAP = {
+			country_event = {
+				id = korjapf.8
+			}
+		}
+	}
+}
+
+country_event = { #영친왕
+	id = korjapf.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.7"}
+	title = korjapf.7.t
+	desc = korjapf.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = korjapf.7.a
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_popularities = {
+				totalist = 0
+				syndicalist = 0
+				radical_socialist = 1
+				social_democrat = 37
+				social_liberal = 17
+				market_liberal = 32
+				social_conservative = 11
+				authoritarian_democrat = 2
+				paternal_autocrat = 0
+				national_populist = 0
+			}
+		}
+		remove_all_ministers = yes
+		remove_ideas_with_trait = chief_of_staff
+		remove_ideas_with_trait = chief_of_army
+		remove_ideas_with_trait = chief_of_navy
+		remove_ideas_with_trait = chief_of_air_force
+		add_ideas = {
+			JAP_Abe_Iso_hog_sde
+			JAP_Katayama_Tetsu_for_sde
+			JAP_Mizutani_Chozaburo_eco_sde
+			JAP_Matsuoka_Komakichi_sec_sde
+			JAP_Umezu_Yoshijiro_cos_sli
+			JAP_Imai_Takeo_carm_mli
+			JAP_Inoue_Shigeyoshi_cnav_sli
+			JAP_Genda_Minoru_cair_sco
+		}
+
+		create_country_leader = {
+			name = "Yi Un"
+			desc = "POLITICS_JAP_Yi_Un_DESC"
+			picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un.dds"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yi Un"
+			desc = "POLITICS_JAP_Yi_Un_DESC"
+			picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un.dds"
+			expire = "1965.1.1"
+			ideology = social_liberal_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yi Un"
+			desc = "POLITICS_JAP_Yi_Un_DESC"
+			picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un.dds"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yi Un"
+			desc = "POLITICS_JAP_Yi_Un_DESC"
+			picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un.dds"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yi Un"
+			desc = "POLITICS_JAP_Yi_Un_DESC"
+			picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un.dds"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yi Un"
+			desc = "POLITICS_JAP_Yi_Un_DESC"
+			picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un.dds"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yi Un"
+			desc = "POLITICS_JAP_Yi_Un_DESC"
+			picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un.dds"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = {}
+		}
+		add_stability = -0.2
+		set_cosmetic_tag = JAP_state
+	}
+}
+
+country_event = { #야스히토 친왕
+	id = korjapf.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.8"}
+	title = korjapf.8.t
+	desc = korjapf.8.d
+	is_triggered_only = yes
+	
+	option = {
+		name = korjapf.8.a
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_popularities = {
+				totalist = 0
+				syndicalist = 0
+				radical_socialist = 1
+				social_democrat = 37
+				social_liberal = 17
+				market_liberal = 32
+				social_conservative = 11
+				authoritarian_democrat = 2
+				paternal_autocrat = 0
+				national_populist = 0
+			}
+		}
+		remove_all_ministers = yes
+		remove_ideas_with_trait = chief_of_staff
+		remove_ideas_with_trait = chief_of_army
+		remove_ideas_with_trait = chief_of_navy
+		remove_ideas_with_trait = chief_of_air_force
+		add_ideas = {
+			JAP_Abe_Iso_hog_sde
+			JAP_Katayama_Tetsu_for_sde
+			JAP_Mizutani_Chozaburo_eco_sde
+			JAP_Matsuoka_Komakichi_sec_sde
+			JAP_Umezu_Yoshijiro_cos_sli
+			JAP_Imai_Takeo_carm_mli
+			JAP_Inoue_Shigeyoshi_cnav_sli
+			JAP_Genda_Minoru_cair_sco
+		}
+		
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASHUHITO_DESC"
+			picture = "Portrait_Japan_Yasuhito.tga"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASHUHITO_DESC"
+			picture = "Portrait_Japan_Yasuhito.tga"
+			expire = "1965.1.1"
+			ideology = social_liberal_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASHUHITO_DESC"
+			picture = "Portrait_Japan_Yasuhito.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASHUHITO_DESC"
+			picture = "Portrait_Japan_Yasuhito.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASHUHITO_DESC"
+			picture = "Portrait_Japan_Yasuhito.tga"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASHUHITO_DESC"
+			picture = "Portrait_Japan_Yasuhito.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASHUHITO_DESC"
+			picture = "Portrait_Japan_Yasuhito.tga"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = {}
+		}
+		add_stability = -0.1
+		set_cosmetic_tag = JAP_state
+	}
+}
+
+country_event = { #공사관 도시의 이권이 넘어오다
+	id = korjapf.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korjapf.9"}
+	title = korjapf.9.t
+	desc = korjapf.9.d
+	picture = profits
+	is_triggered_only = yes
+	option = {
+		name = korjapf.9.a			
+		KOR = {
+			add_ideas = PROFF_LEG_CITIES
+			diplomatic_relation = {
+				country = LEC
+				relation = guarantee
+				active = yes
+			}
+			diplomatic_relation = {
+				country = LEC
+				relation = military_access
+				active = yes
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = korfngd.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfngd.1"}
+	title = korfngd.1.t
+	desc = korfngd.1.d
+	is_triggered_only = yes
+	option = {
+		name = korfngd.4.a
+	}
+}
+
+country_event = { 
+	id = korfngd.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfngd.2"}
+	title = korfngd.2.t
+	desc = korfngd.2.d
+	fire_only_once = yes
+	trigger = {
+		tag = KOR
+		has_war_with = FNG
+		is_subject = no
+		745 = {
+			OR = {
+				is_controlled_by = FNG
+				controller = { is_subject_of = FNG }
+				AND = {
+					controller = { is_in_faction_with = FNG }
+					FNG = { is_faction_leader = yes }
+				}
+			}
+		}
+		716 = {
+			OR = {
+				is_controlled_by = FNG
+				controller = { is_subject_of = FNG }
+				AND = {
+					controller = { is_in_faction_with = FNG }
+					FNG = { is_faction_leader = yes }
+				}
+			}
+		}
+		1104 = {
+			OR = {
+				is_controlled_by = FNG
+				controller = { is_subject_of = FNG }
+				AND = {
+					controller = { is_in_faction_with = FNG }
+					FNG = { is_faction_leader = yes }
+				}
+			}
+		}
+		886 = {
+			OR = {
+				is_controlled_by = FNG
+				controller = { is_subject_of = FNG }
+				AND = {
+					controller = { is_in_faction_with = FNG }
+					FNG = { is_faction_leader = yes }
+				}
+			}
+		}
+		1105 = {
+			OR = {
+				is_controlled_by = FNG
+				controller = { is_subject_of = FNG }
+				AND = {
+					controller = { is_in_faction_with = FNG }
+					FNG = { is_faction_leader = yes }
+				}
+			}
+		}
+		328 = {
+			OR = {
+				is_controlled_by = FNG
+				controller = { is_subject_of = FNG }
+				AND = {
+					controller = { is_in_faction_with = FNG }
+					FNG = { is_faction_leader = yes }
+				}
+			}
+		}
+		885 = {
+			OR = {
+				is_controlled_by = FNG
+				controller = { is_subject_of = FNG }
+				AND = {
+					controller = { is_in_faction_with = FNG }
+					FNG = { is_faction_leader = yes }
+				}
+			}
+		}
+		1106 = {
+			OR = {
+				is_controlled_by = FNG
+				controller = { is_subject_of = FNG }
+				AND = {
+					controller = { is_in_faction_with = FNG }
+					FNG = { is_faction_leader = yes }
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = { #타협
+		name = korfngd.2.a
+		add_political_power = -100
+		add_stability = -0.30
+        add_war_support = -0.30
+		FNG = {
+			country_event = {
+				id = korfngd.3 days = 2
+			}
+		}
+	}
+	
+	option = { #항전
+		name = korfngd.2.b
+		add_political_power = -100
+		add_stability = -0.30
+        add_war_support = -0.30
+		FNG = {
+			country_event = {
+				id = korfngd.4 days = 2
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = korfngd.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfngd.3"}
+	title = korfngd.3.t
+	desc = korfngd.3.d
+	is_triggered_only = yes
+	option = {
+		name = korfngd.3.a
+		add_political_power = 100
+        add_stability = 0.30
+		add_war_support = 0.30
+		KOR = { white_peace_with_ROOT = yes }
+		FNG = {
+			transfer_state = 745
+			transfer_state = 716
+			transfer_state = 1104
+			transfer_state = 886
+			transfer_state = 1105
+			transfer_state = 328
+			transfer_state = 885
+			transfer_state = 1106
+		}
+	}
+}
+
+country_event = { #
+	id = korfngd.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event korfngd.4"}
+	title = korfngd.4.t
+	desc = korfngd.4.d
+	is_triggered_only = yes
+	option = {
+		name = korfngd.4.a
+	}
+}

@@ -1,0 +1,99 @@
+spriteTypes = {
+	
+	### KOR ###
+
+	spriteType = {
+		name = "GFX_idea_KOR_Dae_jong_gyo"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_Dae_jong_gyo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_KOR_Dae_jong_gyo_2"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_Dae_jong_gyo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_gold"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_gold.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_sco_empire"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_sco_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_mli_sli_empire"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_mli_sli_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_ade_empire"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_ade_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_sde_empire"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_sde_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_KOR_Korean_Manchu_Conflict"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_Korean-Manchu Conflict.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_KOR_God_help_the_emperor"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_Emperor_hurray.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_KOR_Korea_hurray"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_Korea_hurray.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_Korea_tiger"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_Korea_tiger.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_economic_deregulation"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_economic_deregulation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_compulsory_education"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_compulsory_education.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_bureaucracy"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_bureaucracy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_God_help_the_emperor"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_Emperor_hurray.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_labor"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_labor_rights.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_GER_advisors"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_GER_advisors.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KOR_CAN_advisors"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_CAN_advisors.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_KOR_manchu_industry"
+		texturefile = "gfx/interface/ideas/ideas/idea_KOR_manchu_industry.dds"
+	}
+}

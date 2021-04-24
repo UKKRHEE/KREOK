@@ -1,0 +1,24 @@
+state={
+	id=1098
+	name="STATE_1098" #전라북도(Northern Jeolla)
+	manpower=5584105
+
+	state_category = eight
+	resources={
+		chromium=3
+	}
+
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = KOR
+	}
+
+	provinces={
+		11977 4126
+	}
+}

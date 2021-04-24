@@ -1,0 +1,83 @@
+﻿l_english:
+
+  ################################################################################################################################################################################################
+  ### KOR
+  ################################################################################################################################################################################################
+
+	### Head of Government ###
+	 KOR_Park_Hyong_Yong_hog_tot:0 "Park Hyong Yong"
+     KOR_Kim_Du_bong_hog_syn:0 "Kim Du bong"
+     KOR_NCJTU_hog_syn:0 "National Council of Joseon Trade Unions"
+     KOR_Alexandra_Kim_hog_rso:0 "Kim Alexandra"
+     KOR_Alexandra_Kim_hog_sde:0 "Kim Alexandra"
+	 KOR_Yuh_Woon_Hyung_hog_sde:0 "Yuh Woon Hyung"
+	 KOR_Kim_Kyu_sik_hog_sli:0 "Kim Kyu sik"
+     KOR_Soh_Jai_pil_hog_sli:0 "Soh Jai pil"
+	 KOR_Kim_Sung_soo_hog_mli:0 "Kim Sung soo"
+	 KOR_Kim_Ku_hog_sco:0 "Kim Ku"
+	 KOR_Nam_Gung_Eog_hog_ade:0 "Nam Gung Eog"
+	 KOR_Yi_Sang_sul_hog_ade:0 "Yi Sang sul"
+     KOR_Jeon_Deog_won_pau:0 "Jeon Deog won"
+	 KOR_Yi_Un_hog_pau:0 "Yi Un"
+     KOR_Lee_Bom_Suk_hog_npo:0 "Lee Bom Suk"
+
+	### Foreign Minister ###
+     KOR_Park_Hyong_Yong_for_tot:0 "Park Hyong Yong"
+     KOR_Alexandra_Kim_for_rso:0 "Alexandra Kim"
+	 KOR_Alexandra_Kim_for_sde:0 "Alexandra Kim"
+	 KOR_Kim_Gyu_Sik_for_sli:0 "Kim Gyu Sik"
+	 KOR_Chang_Myon_for_mli:0 "Chang Myon"
+	 KOR_Yi_Wi_jong_for_ade:0 "Yi Wi jong"
+
+	### Economy Minister ###
+     KOR_Choe_Chang_ik_eco_syn:0 "Choe Chang ik"
+	 KOR_Lee_Hoe_yeong_eco_rso:0 "Lee Hoe yeong"
+	 KOR_Yang_Gi_tak_eco_sli:0 "Yang Gi tak"
+     KOR_Kim_Do_yeon_eco_mli:0 "Kim Do yeon"
+     KOR_Yi_Si_yeong_eco_sco:0 "Yi Si yeong"
+	 KOR_Kim_Chang_sook_eco_ade:0 "Kim Chang sook"
+	 KOR_Jeong_Jeong_hwa_eco_ade:0 "Jeong Jeong hwa"
+
+	### Security Minister ###
+	 KOR_Park_Hyong_Yong_sec_tot:0 "Park Hyong Yong"
+     KOR_Kim_Jae_bong_sec_tot:0 "Kim Jae bong"
+     KOR_Kim_lib_sec_rso:0 "Kim lib"
+	 KOR_An_Chang_ho_sec_sde:0 "An Chang ho"
+	 KOR_Hong_Jin_sec_sli:0 "Hong Jin"
+	 KOR_Yi_Si_yeong_sec_sco:0 "Yi Si yeong"
+	 KOR_Ham_Tae_young_sec_sco:0 "Ham Tae young"
+     KOR_Sin_Ik_hui_sec_ade:0 "Sin Ik hui"
+	 KOR_Yi_Gab_sec_ade:0 "Yi Gab"
+
+	### Intelligence Minister ###
+	 KOR_Kim_Dan_ya_int_syn:0 "Kim Dan ya"
+	 KOR_Kim_lib_int_rso:0 "Kim lib"
+	 KOR_Cho_So_Ang_int_sde:0 "Cho So Ang"
+	 KOR_Yi_Si_yeong_int_sco:0 "Yi Si yeong"
+	 KOR_Kim_Ui_han_int_ade:0 "Kim Ui han"
+
+	### Chief of Staff ###
+	 KOR_Ji_Cheong_cheon_cos_sli:0 "Ji Cheong cheon"
+     KOR_Kim_Chwa_chin_cos_sli:0 "Kim Chwa chin"
+	 KOR_Yi_Wu_cos_pau:0 "Yi Wu"
+     KOR_An_Jung_geun_cos_sco:0 "An Jung geun"
+
+	### Chief of Army ###
+	 KOR_Kim_Won_Bong_carm_sde:0 "Kim Won Bong"
+	 KOR_Ryu_Kyung_Su_carm_sde:0 "Ryu Kyung Su"
+     KOR_Yang_Se_bong_carm_sli:0 "Yang Se bong"
+	 KOR_Kim_Hong_il_carm_sli:0 "Kim Hong il"
+     KOR_Shin_Pal_gyun_carm_sco:0 "Shin Pal gyun"
+     KOR_Kim_Kyung_cheon_carm_ade:0 "Kim Kyung cheon"
+     KOR_Yi_Un_carm_pau:0 "Yi Un"
+     KOR_Lee_Beom_seok_carm_npo:0 "Lee Beom seok"
+
+	### Chief of Navy ###
+     KOR_Choi_Sung_hak_cnav_sde:0 "Choi Sung hak"
+	 KOR_Soon_Won_yil_cnav_sli:0 "Soon Won yil"
+     KOR_Park_Ok_kyu_cnav_mli:0 "Park Ok kyu"
+	 KOR_Sin_Sun_seong_cnav_sco:0 "Sin Sun seong"
+
+	### Chief of Air Force ###
+	 KOR_Choe_yong_duk_cair_sli:0 "Choe yong duk"
+	 KOR_No_Baek_rin_cair_sco:0 "No Baek rin"

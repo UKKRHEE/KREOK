@@ -1,0 +1,21 @@
+state={
+	id=1104
+	name="STATE_1104" #평안북도(Northern PyongBuk)
+	manpower=503206
+
+	state_category = three
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 5
+		}
+		victory_points = {
+			11835 5
+		}
+		add_core_of = KOR
+	}
+
+	provinces={
+		11835 912 978 9918 11896 9795 11828 11775 6963
+	}
+}

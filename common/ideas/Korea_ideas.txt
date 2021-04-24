@@ -1,0 +1,818 @@
+################
+### 한국 국민정신 ###
+################
+
+ideas = {
+
+################
+### 국가 국민정신 ###
+################
+
+	country = {
+
+		### 시작시 ###
+
+		KOR_Dae_jong_gyo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Dae_jong_gyo"}
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				surrender_limit = 0.05
+			}
+		}
+		
+		KOR_Dae_jong_gyo_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Dae_jong_gyo_2"}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				surrender_limit = 0.1
+			}
+		}
+
+		KOR_Korean_Manchu_Conflict = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Korean_Manchu_Conflict"}
+			picture = KOR_Korean_Manchu_Conflict
+			modifier = {
+				political_power_gain = -0.35
+				conscription_factor = -0.25
+			}
+		}
+
+		KOR_Bed_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Bed_army"}
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				sarmy_org_Factor = -0.25
+                planning_speed = -0.25
+			}
+		}
+		
+		KOR_Bed_welfare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Bed_welfare"}
+			picture = raj_risk_of_famine
+			modifier = {
+				stability_factor = -0.10
+				conscription_factor = -0.10
+				consumer_goods_factor = 0.07
+			}
+		}
+		
+		KOR_Bed_welfare_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Bed_welfare_2"}
+			picture = raj_risk_of_famine
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.10
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		### 검은 월요일 ###
+
+		KOR_black_monday = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_black_monday"}
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.60
+				industrial_capacity_factory = -0.60
+				production_speed_buildings_factor = -0.6
+			}
+		}
+
+		KOR_black_monday_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_black_monday_1"}
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.50
+				industrial_capacity_factory = -0.5
+				production_speed_buildings_factor = -0.5
+			}
+		}
+		
+		KOR_black_monday_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_black_monday_2"}
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.50
+				industrial_capacity_factory = -0.5
+				production_speed_buildings_factor = -0.5
+			}
+		}
+		
+		KOR_black_monday_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_black_monday_3"}
+			picture = great_depression
+			modifier = {
+				production_factory_max_efficiency_factor = -0.35
+				industrial_capacity_factory = -0.35
+				production_speed_buildings_factor = -0.35
+			}
+		}
+
+		### 이벤트 ###
+
+		KOR_gold = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_gold"}
+			picture = KOR_gold
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		KOR_NCJTU = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_NCJTU"}
+			picture = KOR_labor
+			modifier = {
+				political_power_gain = -0.25
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		KOR_NOT_NCJTU = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_NOT_NCJTU"}
+			picture = quenched_militarism
+			modifier = {
+				industrial_capacity_factory = -0.05
+			}
+		}
+		
+		KOR_korean_language_society = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_korean_language_society"}
+			picture = KOR_compulsory_education
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}
+
+		### 정치 ###
+	
+		KOR_financial_laws = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_financial_laws"}
+			picture = generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		
+		KOR_status_quo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_status_quo"}
+			picture = generic_neutrality_drift_bonus
+			modifier = {
+				political_power_gain = 0.1
+				stability_weekly = -0.001
+			}
+		}
+
+		KOR_sco_empire = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_sco_empire"}
+			picture = KOR_sco_empire
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = 0.001
+			}
+		}
+		
+		KOR_economic_deregulation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_economic_deregulation"}
+			picture = KOR_economic_deregulation
+			modifier = {
+				min_export = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		KOR_compulsory_education = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_compulsory_education"}
+			picture = KOR_compulsory_education
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		KOR_mli_sli_empire = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_mli_sli_empire"}
+			picture = KOR_mli_sli_empire
+			modifier = {
+				stability_factor = 0.15
+			}
+		}
+		
+		KOR_bureaucracy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_bureaucracy"}
+			picture = KOR_bureaucracy
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		
+		KOR_God_help_the_emperor = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_God_help_the_emperor"}
+			picture = KOR_God_help_the_emperor
+			modifier = {
+				political_power_gain = 0.1
+        		army_morale_factor = 0.05
+        		planning_speed = 0.30
+			}
+		}
+		
+		KOR_ade_empire = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_ade_empire"}
+			picture = KOR_ade_empire
+			modifier = {
+				war_support_factor = 0.05
+				war_support_weekly = 0.001
+			}
+		}
+		
+		KOR_labor_rights = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_labor_rights"}
+			picture = economic_control_icon
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		KOR_not_rich_poor_gap = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_not_rich_poor_gap"}
+			picture = generic_central_management
+			modifier = {
+				consumer_goods_factor = -0.07
+			}
+		}
+		
+		KOR_sde_empire = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_sde_empire"}
+			picture = KOR_sde_empire
+			modifier = {
+				political_power_gain = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		KOR_Manchu_autonomy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Manchu_autonomy"}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = 0.05
+        		conscription_factor = 0.30
+				monthly_population = 0.15
+			}
+		}
+		
+		KOR_Manchu_Conscript = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Manchu_Conscript"}
+			picture = ast_classify_aliens
+			modifier = {
+				stability_factor = -0.25
+        		conscription = 0.02
+				monthly_population = 0.30
+			}
+		}
+		
+		KOR_Korea_hurray = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Korea_hurray"}
+			picture = KOR_Korea_hurray
+			modifier = {
+				political_power_gain = 0.25
+        		army_morale_factor = 0.05
+				army_org_Factor = 0.05
+        		planning_speed = 0.05
+			}
+		}
+		
+		KOR_rights = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_rights"}
+			picture = denbts
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		### 경제 ###
+		
+		KOR_reign_of_peace = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_reign_of_peace"}
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		
+		KOR_all_armed = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_all_armed"}
+			picture = generic_license_production
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		KOR_han_river = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_han_river"}
+			picture = chi_hyper_inflation5
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+		
+		### 외교 ###
+		
+		KOR_volunteer_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_volunteer_army"}
+			picture = chi_army_corruption3
+			modifier = {
+				send_volunteer_divisions_required = -0.75
+				send_volunteer_size = 5
+			}
+		}
+		
+		KOR_arms_export = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_arms_export"}
+			picture = MEX_callistas
+			modifier = {
+				lend_lease_tension = -0.75
+				consumer_goods_factor = -0.01
+			}
+		}
+
+		KOR_Korea_tiger = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Korea_tiger"}
+			picture = idea_KOR_Korea_tiger
+			modifier = {
+				max_planning = 0.10
+       			training_time_army_factor = -0.1
+        		supply_consumption_factor = -0.05
+			}
+		}
+
+		KOR_GER_advisors = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_GER_advisors"}
+			picture = idea_KOR_GER_advisors
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			modifier = {
+				army_org_Factor = 0.1
+			}
+		}
+
+		KOR_CAN_advisors = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_CAN_advisors"}
+			picture = idea_KOR_CAN_advisors
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			modifier = {
+				planning_speed = 0.1
+			}
+		}
+		
+		### 군사 - 육군 ###
+
+		KOR_Korea_attack = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Korea_attack"}
+			picture = generic_artillery_regiments
+			modifier = {
+				army_attack_factor = 0.15
+			}
+		}
+		
+		### 군사 - 해군 ###
+
+		KOR_Yi_Sun_sin = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_Yi_Sun_sin"}
+			picture = generic_navy_bonus
+			modifier = {
+				navy_max_range_factor = 0.15
+				industrial_capacity_dockyard = 0.1
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				light_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				heavy_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				battleship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				SH_battleship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		
+		### 군사 - 공군 ###
+
+		KOR_air_force = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_air_force"}
+			picture = generic_air_bonus
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				cv_nav_bomber_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+		KOR_fighter_pilot = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_fighter_pilot"}
+			picture = generic_air_payment
+			modifier = {
+				air_agility_factor = 0.1
+				air_ace_generation_chance_factor = 0.30
+			}
+		}
+		
+		KOR_JAP_YN = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_JAP_YN"}
+			picture = generic_the_london_naval_treaty
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+
+		KOR_NN = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_NN"}
+			picture = generic_the_london_naval_treaty
+			modifier = {
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+		
+		KOR_MAN_Y = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_MAN_Y"}
+			picture = idea_KOR_manchu_industry
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		KOR_dragon_train = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_dragon_train"}
+			picture = man_low_legitimacy
+			targeted_modifier = {
+				tag = QIE
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = LEP
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = ANQ
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = GXC
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = HNN
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = YUN
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SZC
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SHX
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SQI
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = XSM
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SIK
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+		}
+		
+		KOR_sun_die = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_sun_die"}
+			picture = FNG_expel_japanese_bandits
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+		}
+		
+		KOR_retribution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_retribution"}
+			picture = AST_oversized_fleet
+			modifier = {
+				amphibious_invasion = 0.50
+			}
+		}
+	}
+
+############
+### 산업체 ###
+############
+
+###########
+### 일반 ###
+###########
+
+	industrial_concern = {
+
+		KOR_posco = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_posco"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		
+	}
+
+###########
+### 화기 ###
+###########
+
+	weapons_manufacturer = {
+		designer = yes
+
+		KOR_add_1 = { #대포
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_add_1"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				artillery_producer_offense_2
+			}
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+		
+		KOR_add_2 = { #기계화
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_add_2"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				motorised_equipment_producer_offense_2
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+		
+		KOR_add_3 = { #보병 장비
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_add_3"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				infantry_equipment_producer_allround_2
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+###########
+### 기갑 ###
+###########
+
+	tank_manufacturer = {
+		designer = yes
+		
+		KOR_rotem_1 = { #경전차
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_rotem_1"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				small_tank_producer_offense_2
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		
+		KOR_rotem_2 = { #중형전차
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_rotem_2"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				medium_tank_producer_defense_2
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		
+		KOR_rotem_3 = { #중전차
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_rotem_3"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				heavy_tank_producer_offense_2
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+	}
+
+################
+### 함선 및 항공 ###
+################
+
+	naval_manufacturer = {
+		designer = yes
+
+		KOR_hyundai_1 = { #주력함
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_hyundai_1"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				capital_ship_producer_offense_2
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+		
+		KOR_hyundai_2 = { #순양함
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_hyundai_2"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				cruiser_producer_defense_2
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+		
+		KOR_hyundai_3 = { #소형함
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_hyundai_3"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				small_ship_producer_offense_2
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+	
+		KOR_kai_1 = { #전투기
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_kai_1"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				fighter_producer_offense_2
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+		
+		KOR_kai_2 = { #근접기 및 뇌격기
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_kai_2"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				nav_cas_producer_offense_2
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+		
+		KOR_kai_3 = { #폭격기
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_kai_3"}
+			allowed = {
+				original_tag = KOR
+			}
+			traits = {
+				bomber_producer_defense_2
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+	}
+
+}

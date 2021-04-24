@@ -1,0 +1,57 @@
+spriteTypes = {
+	
+	##Korea##
+	
+	spriteType = { #경전차
+		name = "GFX_idea_KOR_rotem_1"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_rotem.dds"
+	}
+	spriteType = { #중형전차
+		name = "GFX_idea_KOR_rotem_2"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_rotem.dds"
+	}
+	spriteType = { #중전차
+		name = "GFX_idea_KOR_rotem_3"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_rotem.dds"
+	}
+	spriteType = { #주력함
+		name = "GFX_idea_KOR_hyundai_1"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_hyundai.dds"
+	}
+	spriteType = { #순양함
+		name = "GFX_idea_KOR_hyundai_2"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_hyundai.dds"
+	}
+	spriteType = { #소형함
+		name = "GFX_idea_KOR_hyundai_3"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_hyundai.dds"
+	}
+	spriteType = { #전투기
+		name = "GFX_idea_KOR_kai_1"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_kai.dds"
+	}
+	spriteType = { #근접기 및 뇌격기
+		name = "GFX_idea_KOR_kai_2"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_kai.dds"
+	}
+	spriteType = { #폭격기
+		name = "GFX_idea_KOR_kai_3"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_kai.dds"
+	}
+    spriteType = { #대포
+		name = "GFX_idea_KOR_add_1"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_add.dds"
+	}
+	spriteType = { #기계화
+		name = "GFX_idea_KOR_add_2"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_add.dds"
+	}
+	spriteType = { #보병 장비
+		name = "GFX_idea_KOR_add_3"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_add.dds"
+	}
+	spriteType = { #산업
+		name = "GFX_idea_KOR_posco"
+		texturefile = "gfx/interface/ideas/KOR/companies/KOR_posco.dds"
+	}
+}

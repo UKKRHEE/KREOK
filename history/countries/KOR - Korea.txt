@@ -1,0 +1,520 @@
+﻿capital = 525
+OOB = "KOR"
+set_naval_oob = "KOR_naval"
+set_stability = 0.45
+set_war_support = 0.26
+set_research_slots = 3
+
+set_technology = {
+	### 보병 ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	marines  = 1
+	
+	### 지원 ###
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_military_police = 1
+	
+	### 포병 ###
+	gw_artillery = 1
+	
+	### 전차 ###
+	gwtank = 1
+	basic_light_tank = 1
+	
+	### 공군 ###
+	early_fighter = 1
+	cv_early_fighter = 1
+	CAS1 = 1
+	cv_CAS1 = 1
+	fighter1 = 1
+	cv_fighter1 = 1
+	naval_bomber1 = 1
+	cv_naval_bomber1 = 1
+	early_bomber = 1
+	
+	### 육군 교리 ###
+	superior_firepower = 1
+	
+	### 산업/공학 ###
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	fuel_refining = 1
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		weltkrieg_light_ship_hull = 1
+		contact_mine = 1
+		light_ship_hull_1936 = 1
+		weltkrieg_cruiser_hull = 1
+		cruiser_hull_1936 = 1
+		weltkrieg_submarine_hull = 1
+		submarine_hull_1936 = 1
+		cruiser_submarine = 1
+		carrier_conversion = 1
+		carrier_hull_1936 = 1
+		ship_hull_revived_ac = 1
+		weltkrieg_heavy_ship_hull = 1
+		heavy_ship_hull_1936 = 1
+		ship_hull_super_heavy = 1
+
+		## Modules##
+		early_torpedo = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		light_battery_one = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		basic_heavy_armor_scheme = 1
+		capital_gunnery_one = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		naval_ammo_two = 1
+		transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+
+if = {
+	limit = {
+		not = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		weltkrieg_destroyer_nonmtg = 1
+		interwar_destroyer_nonmtg = 1
+		weltkrieg_cruiser_nonmtg = 1
+		interwar_cruiser_nonmtg = 1
+		weltkrieg_submarine_nonmtg = 1
+		interwar_submarine_nonmtg = 1
+		weltkrieg_armored_cruiser_nonmtg = 1
+		interwar_armored_cruiser_nonmtg = 1
+		weltkrieg_fast_battleship_nonmtg = 1
+		interwar_fast_battleship_nonmtg = 1
+		weltkrieg_dreadnought_nonmtg = 1
+		super_heavy_dreadnought_nonmtg = 1
+		heavy_carrier_nonmtg = 1
+		transport = 1
+	}
+}
+
+set_convoys = 130
+
+set_politics = {
+	ruling_party = authoritarian_democrat
+	last_election = "1931.3.8"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+    totalist = 1
+    syndicalist = 3
+    radical_socialist = 2
+    social_democrat = 23
+    social_liberal = 5
+    market_liberal = 6
+    social_conservative = 18
+    authoritarian_democrat = 35
+    paternal_autocrat = 5
+    national_populist = 2
+}
+
+add_ideas = { 
+	#정부수반(총리대신)
+	KOR_Kim_Ku_hog_sco
+	#외교장관(외부대신)
+	KOR_Kim_Gyu_Sik_for_sli
+	#경제장관(탁부대신)
+	KOR_Jeong_Jeong_hwa_eco_ade
+	#내무장관(내부대신)
+	KOR_An_Chang_ho_sec_sde
+    #국가 정신
+    KOR_Dae_jong_gyo
+    KOR_Korean_Manchu_Conflict
+    KOR_Bed_army
+    KOR_Bed_welfare
+}
+
+### 국가원수 ###
+create_country_leader = {
+	name = "Pak Hon yong"
+	desc = "POLITICS_PAK_HONYONG_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Pak_Hon_yong.dds"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Kim Tu bong"
+	desc = "POLITICS_KIM_TUBONG_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Kim_Tu_bong.dds"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Yi Dong hwi"
+	desc = "POLITICS_YI_DONGHWI_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Dong_hwi.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Yi Wu"
+	desc = "POLITICS_YI_WU_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Wu.dds"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = { KOR_handsome_emperor }
+}
+
+create_country_leader = {
+	name = "Yi Wu"
+	desc = "POLITICS_YI_WU_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Wu.dds"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = { KOR_handsome_emperor }
+}
+
+create_country_leader = {
+	name = "Yi Wu"
+	desc = "POLITICS_YI_WU_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Wu.dds"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = { KOR_handsome_emperor }
+}
+
+create_country_leader = {
+	name = "Yi Wu"
+	desc = "POLITICS_YI_WU_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Wu.dds"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = { KOR_handsome_emperor }
+}
+
+create_country_leader = {
+	name = "Yi Wu"
+	desc = "POLITICS_YI_WU_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Wu.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = { KOR_handsome_emperor }
+}
+
+create_country_leader = {
+	name = "Yi Wu"
+	desc = "POLITICS_YI_WU_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Wu.dds"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = { KOR_handsome_emperor }
+}
+
+create_country_leader = {
+	name = "Lee Beom seok"
+	desc = "POLITICS_LEE_BEOMSEOK_DESC"
+	picture = "gfx/leaders/KOR/Portrait_KOR_Lee_Beom_seok.dds"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = { KOR_daemagliji }
+}
+
+### 원수
+create_field_marshal = {
+	name = "Yi Un"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Yi_Un.dds"
+	desc = "KOR_YI_UN_ARMY_DESC"
+	traits = {
+		politically_connected
+		old_guard
+		defensive_doctrine
+		media_personality
+	}
+	skill = 2
+    attack_skill = 2
+    defense_skill = 4
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "An Jung geun"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_An_Jung_geun.dds"
+	desc = "KOR_AN_JUNGGEUN_ARMY_DESC"
+	traits = {
+		brilliant_strategist
+		war_hero
+		offensive_doctrine
+	}
+	skill = 3
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Kim Chwa chin"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Kim_Chwa_chin.dds"
+	desc = "KOR_KIM_CHWACHIN_ARMY_DESC"
+	traits = {
+		brilliant_strategist
+		war_hero
+		media_personality
+		career_officer
+		offensive_doctrine
+	}
+	skill = 3
+    attack_skill = 4
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 3
+}
+
+### 대장
+create_corps_commander = {
+	name = "Ji Cheong Cheone"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Ji_Cheong_cheon.dds"
+	desc = "KOR_JI_CHEONGCHEONE_ARMY_DESC"
+	traits = {
+		inflexible_strategist
+		infantry_officer
+		organizer
+	}
+	skill = 3
+    attack_skill = 2
+    defense_skill = 4
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Lee Beom Seok"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Lee_Beom_seok.dds"
+	desc = "KOR_LEE_BEOMSEOK_ARMY_DESC"
+	traits = {
+		cavalry_officer
+		armor_officer
+		brilliant_strategist
+		politically_connected
+		war_hero
+	}
+	skill = 3
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Kim Hong il"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Kim_Hong_il.dds"
+	desc = "KOR_KIM_HONGIL_ARMY_DESC"
+	traits = {
+		inflexible_strategist
+		artillery_specialist
+		career_officer
+	}
+	skill = 3
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Shin Pal gyun"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Shin_Pal_gyun.dds"
+	desc = "KOR_SHIN_PALGYUN_ARMY_DESC"
+	traits = {
+		infantry_officer
+		career_officer
+		trait_engineer
+	}
+	skill = 3
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Yu Dong yeol"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Yu_Dong_yeol.dds"
+	desc = "KOR_YU_DONGYEOL_ARMY_DESC"
+	traits = {
+		politically_connected
+		cavalry_officer
+		organizer
+		career_officer
+	}
+	skill = 3
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Kim Kyung cheon"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Kim_Kyung_cheon.dds"
+	desc = "KOR_KIM_KYUNGCHEON_ARMY_DESC"
+	traits = {
+		cavalry_officer
+		armor_officer
+		panzer_leader
+		career_officer
+	}
+	skill = 3
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Kim Suk won"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Kim_Suk_won.dds"
+	desc = "KOR_KIM_SUKWON_ARMY_DESC"
+	traits = {
+		infantry_officer
+		brilliant_strategist
+		career_officer
+	}
+	skill = 3
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hong Sa ik"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Hong_Sa_ik.dds"
+	desc = "KOR_HONG_SAIK_ARMY_DESC"
+	traits = {
+		organizer
+		career_officer
+		brilliant_strategist
+	}
+	skill = 2
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Kim Won Bong"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Kim_Won_bong.dds"
+	desc = "KOR_KIM_WINBONG_ARMY_DESC"
+	traits = {
+		commando
+		trickster
+		brilliant_strategist
+	}
+	skill = 3
+    attack_skill = 4
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+### 제독
+create_navy_leader = {
+	name = "Sin Sun seong"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Sin_Sun_seong.dds"
+	desc = "KOR_SIN_SUNSEONG_NAVY_DESC"
+	traits = {
+		naval_lineage
+		battleship_adherent
+		gunnery_expert
+		ironside
+	}
+	skill = 3
+	attack_skill = 5
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Son Won Ile"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Son_Won_il.dds"
+	desc = "KOR_SON_WONILE_NAVY_DESC"
+	traits = {
+		bold
+		aviation_enthusiast
+		superior_tactician
+	}
+	skill = 3
+	attack_skill = 5
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Choi Sung hak"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Choi_Sung_hak.dds"
+	desc = "KOR_CHOI_SUNGHAK_NAVY_DESC"
+	traits = {
+		gentlemanly
+		blockade_runner
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 5
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Park Ok kyu"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Park_Ok_kyu.dds"
+	desc = "KOR_PARK_OKKYU_NAVY_DESC"
+	traits = {
+		chief_engineer
+		spotter
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Shin Sung mo"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Shin_Sung_mo.dds"
+	desc = "KOR_SHIN_SUNGMO_NAVY_DESC"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+KOR_start_naval_variant = yes

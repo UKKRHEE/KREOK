@@ -1,0 +1,512 @@
+###########################
+# Korean Decisions
+###########################
+
+KOR_military = { #한국 군사작전
+
+	KOR_dragon_operation = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			OR = {
+				has_war_with = QIE
+				has_war_with = CHI
+				has_war_with = LEP
+				has_war_with = ANQ
+				has_war_with = GXC
+				has_war_with = HNN
+				has_war_with = YUN
+				has_war_with = SZC
+				has_war_with = SHX
+				has_war_with = SQI
+				has_war_with = XSM
+				has_war_with = SIK
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_lend_lease
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_dragon_operation"
+			add_timed_idea = { idea = KOR_dragon_train days = 180 }
+		}
+	}
+	
+	KOR_QIE_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			QIE = {
+				exists = yes
+				NOT = {
+					QIE = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_QIE_attack"
+			declare_war_on = {
+				target = QIE
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_CHI_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			CHI = {
+				exists = yes
+				NOT = {
+					CHI = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_CHI_attack"
+			declare_war_on = {
+				target = CHI
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_LEP_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			LEP = {
+				exists = yes
+				NOT = {
+					LEP = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_LEP_attack"
+			declare_war_on = {
+				target = LEP
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_ANQ_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			ANQ = {
+				exists = yes
+				NOT = {
+					ANQ = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_ANQ_attack"
+			declare_war_on = {
+				target = ANQ
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_GXC_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			GXC = {
+				exists = yes
+				NOT = {
+					GXC = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_GXC_attack"
+			declare_war_on = {
+				target = GXC
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_HNN_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			HNN = {
+				exists = yes
+				NOT = {
+					HNN = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_HNN_attack"
+			declare_war_on = {
+				target = HNN
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_YUN_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			YUN = {
+				exists = yes
+				NOT = {
+					YUN = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_YUN_attack"
+			declare_war_on = {
+				target = YUN
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_SZC_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			SZC = {
+				exists = yes
+				NOT = {
+					SZC = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_SZC_attack"
+			declare_war_on = {
+				target = SZC
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_SHX_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			SHX = {
+				exists = yes
+				NOT = {
+					SHX = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_SHX_attack"
+			declare_war_on = {
+				target = SHX
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_SQI_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			SQI = {
+				exists = yes
+				NOT = {
+					SQI = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_SQI_attack"
+			declare_war_on = {
+				target = SQI
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_XSM_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			XSM = {
+				exists = yes
+				NOT = {
+					XSM = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_XSM_attack"
+			declare_war_on = {
+				target = XSM
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_SIK_attack = {
+		icon = jap_conquer_china
+		allowed = { tag = KOR }
+		available = {
+			SIK = {
+				exists = yes
+				NOT = {
+					SIK = {
+						is_subject_of = KOR
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KOR_CHI_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_SIK_attack"
+			declare_war_on = {
+				target = SIK
+				type = annex_everything
+			}
+		}
+	}
+	
+	KOR_sun_fall = {
+		icon = jap_pacific_guardian
+		allowed = { tag = KOR }
+		available = {
+			has_war_with = JAP
+		}
+		visible = {
+			has_completed_focus = KOR_lend_lease
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_dragon_operation"
+			add_timed_idea = { idea = KOR_sun_die days = 180 }
+		}
+	}
+	
+	KOR_JAP_attack = {
+		icon = jap_pacific_guardian
+		allowed = { tag = KOR }
+		available = {
+			has_war_with = JAP
+		}
+		visible = {
+			has_completed_focus = KOR_JAP_war
+		}
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KOR_SIK_attack"
+			add_timed_idea = { idea = KOR_retribution days = 180 }
+		}
+	}
+}

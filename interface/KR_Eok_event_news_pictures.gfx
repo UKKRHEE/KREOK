@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_news_event_KOR_coronation"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_KOR_coronation.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_KOR_haedong"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_KOR_haedong.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_capture_hanseong"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_capture_hanseong.dds"
+	}
+}

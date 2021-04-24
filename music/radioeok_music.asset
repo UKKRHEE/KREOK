@@ -1,0 +1,78 @@
+
+# Anthem
+
+music = {
+	name = "anthem_empire"
+	file = "radio_eok/anthem_empire.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "anthem_communism"
+	file = "radio_eok/anthem_communism.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "anthem_fascism"
+	file = "radio_eok/anthem_fascism.ogg"
+	volume = 0.8
+}
+
+# War Song
+
+music = {
+	name = "fuck_communism"
+	file = "radio_eok/fuck_communism.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "going_frontline"
+	file = "radio_eok/going_frontline.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "katyusha"
+	file = "radio_eok/katyusha.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "hereiam"
+	file = "radio_eok/hereiam.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "final_5minutes"
+	file = "radio_eok/final_5minutes.ogg"
+	volume = 0.8
+}
+
+# Peace Song
+
+music = {
+	name = "paldo"
+	file = "radio_eok/paldo.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "internationale"
+	file = "radio_eok/internationale_korean.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "fatherland_korea"
+	file = "radio_eok/fatherland_korea.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "korea_the_beautiful"
+	file = "radio_eok/korea_the_beautiful.ogg"
+	volume = 0.3
+}

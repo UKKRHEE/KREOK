@@ -1,0 +1,22 @@
+state={
+	id=1097
+	name="STATE_1097" #충청남도(Southern Chungcheong)
+	manpower=5584105
+
+	state_category = seven
+
+	history={
+		owner = KOR
+		add_core_of = KOR
+		buildings = {
+			infrastructure = 6
+		}
+		victory_points = {
+			7204 1 
+		}
+	}
+
+	provinces={
+		7204 11992 7175
+	}
+}

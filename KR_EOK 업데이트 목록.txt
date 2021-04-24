@@ -1,0 +1,21 @@
+common
+¤¤bookmarks
+ countries
+ decisions
+ difficulty_settings
+ ideas
+ national_focus
+ on_actions
+ opinion_modifiers
+ scripted_effects
+ scripted_localisation
+ technology_sharing
+ units
+
+gfx
+¤¤entities
+ event_pictures / news_old, old
+ flags / CHI_state, KOR, KOR_JAP_EMPIRE, MON_state, XSM_state
+ interface / goals, ideas, ministers
+ leaders / KOR, JAP
+ models

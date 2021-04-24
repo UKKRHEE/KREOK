@@ -1,0 +1,21 @@
+state={
+	id=1107
+	name="STATE_1107"
+	manpower=13800
+
+	state_category = one_island
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1177 5
+		}
+		add_core_of = KOR
+	}
+	
+	provinces={
+		1177
+	}	
+}

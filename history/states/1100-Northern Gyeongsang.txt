@@ -1,0 +1,33 @@
+state={
+	id=1100
+	name="STATE_1100" #경상북도(Northern Gyeongsang)
+	manpower=3663105
+
+	state_category = eight
+	resources={
+		steel=3
+		chromium=8
+		tungsten=13
+	}
+	
+	history={
+		owner = KOR
+		add_core_of = KOR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			dockyard = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			4086 30 
+		}
+		victory_points = {
+			7121 5
+		}
+	}
+
+	provinces={
+		4103 7121 12089 1081 10115 4086
+	}
+}
